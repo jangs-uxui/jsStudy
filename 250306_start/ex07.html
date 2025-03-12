@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompr()로 사용자 입력받기</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let num, add;
+        num = prompt("숫자를 입력하세요.");
+        document.write("num : " + num + "<hr>");
+        document.write("데이터 타입 : " + typeof(num) + "<hr>");
+
+        add = num + 22;
+        document.write("num + 22 : " + add + "<hr>");
+        num = parseInt(num);
+        document.write("변환된 데이터 타입 : " + typeof(num) + "<hr>");
+        // add = num + 22;
+        document.write("parseInt(" + num + ") + 22 : " + add + "<hr>");
+
+        
+
+    </script>
+
+</body>
+
+</html>

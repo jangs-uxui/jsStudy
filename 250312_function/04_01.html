@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+
+        //연습
+        // reverseString("abc"); //cba
+        // str[2] + str[1] + str[0]
+
+        function reverseString(str) {
+            let sum = ""; // null은 비어있다느 명시적 표시지만 연산안됨. 다른 값으로 덮어쓸때 사용.
+            for (let i = (str.length - 1); i >= 0; i--) {
+                sum = sum + str[i];
+            }
+            return sum;
+        }
+
+        document.write(reverseString("가나다"));
+
+    </script>
+
+</body>
+
+</html>

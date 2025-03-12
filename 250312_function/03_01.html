@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+
+        function repeatString(str, times) {
+            let result = "";
+            for (let i = 0; i < times; i++) {
+                result = result + str + " ";
+            }
+            return result;
+        }
+
+        document.write(repeatString("abc", 3));
+
+
+    </script>
+
+</body>
+
+</html>

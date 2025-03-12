@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // prompt:몇개의 숫자를 입력하시겠습니까?
+        // 입력한 숫자들의 합계
+
+        let count = 0;
+        let sum = 0;
+        let length = parseInt(prompt("몇번 입력하시겠습니까?"));
+        
+        while (count < length) {
+            count++;
+            let input = parseInt(prompt("더할 숫자를 입력해 주세요."));
+            sum += input;
+        }
+        document.write("숫자의 합: " + sum);
+
+
+
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

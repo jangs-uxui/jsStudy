@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-case문</title>
+</head>
+
+<body>
+    <script>
+
+        // 연산을 선택하세요. (1:덧셐, 2:뺄셈, 3:곱셈, 4:나눗셈)
+        // 연산번호를 잘못 선택하였습니다.
+        // 첫번째 숫자를 입력하세요.
+        // 두번째 숫자를 입력하세요.
+        // 연산의 결과 출력
+
+        // let operation = parseInt(prompt("연산을 선택하세요. (1:덧셈, 2:뺄셈, 3:곱셈, 4:나눗셈)"));
+        // if (operation > 4 || operation < 1) {
+        //     document.write("연산번호를 잘못 선택하였습니다.");
+        // } else {
+        //     let num01 = parseInt(prompt("첫번째 숫자를 입력하세요."));
+        //     let num02 = parseInt(prompt("두번째 숫자를 입력하세요."));
+        //     let result = 0;
+
+        //     switch (operation) {
+        //         case 1:
+        //             result = num01 + num02;
+        //             break;
+        //         case 2:
+        //             result = num01 - num02;
+        //             break;
+        //         case 3:
+        //             result = num01 * num02;
+        //             break;
+        //         case 4:
+        //             result = num01 / num02;
+        //             break;
+        //     }
+        //     document.write("연산의 결과: " + result);
+        // }
+        
+
+        let operation = parseInt(prompt("연산을 선택하세요. (1:덧셈, 2:밸셈, 3:곱셈, 4:나눗셈)"));
+  
+        let num01 = null;
+        let num02 = null;
+        let result = 0;
+
+        switch (operation) {
+            case 1:
+                num01 = parseInt(prompt("첫번째 숫자 입력"));
+                num02 = parseInt(prompt("두번째 숫자 입력"));
+                result = num01 + num02;
+                document.write("연산의 결과: " + result);
+                break;
+            case 2:
+                num01 = parseInt(prompt("첫번째 숫자 입력"));
+                num02 = parseInt(prompt("두번째 숫자 입력"));
+                result = num01 - num02;
+                document.write("연산의 결과: " + result);
+                break;
+            case 3:
+                num01 = parseInt(prompt("첫번째 숫자 입력"));
+                num02 = parseInt(prompt("두번째 숫자 입력"));
+                result = num01 * num02;
+                document.write("연산의 결과: " + result);
+                break;
+            case 4:
+                num01 = parseInt(prompt("첫번째 숫자 입력"));
+                num02 = parseInt(prompt("두번째 숫자 입력"));
+                result = num01 / num02;
+                document.write("연산의 결과: " + result);
+                break;
+            default:
+                document.write("잘못된 연산번호 입니다.");
+        }
+
+        
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+
+        function makeFood(num) {
+            if (num >= 1 && num <= 3) {
+                document.write("<img src='../media2/food" + num + ".png'>");
+                return true;
+            } else return false;
+        } // 함수 정의 (돌려줄 결과값이 있는 경우 return)
+
+        const food = parseInt(prompt("메뉴번호를 선택하세요.(1.햄버거, 2.피자, 3.감자튀김)"));
+        const result = makeFood(food); // 함수 호출
+        if (result) {
+            document.write("<hr>식사 맛있게 하세요");
+        } else
+            document.write("없는 메뉴를 선택하셨습니다.");
+
+
+        // 
+
+
+        // 3항연산자 사용ver
+        // function makeFood(num) {
+        //     if (num >= 1 && num <= 3) {
+        //         document.write("<img src='../media2/food" + num + ".png'><hr>");
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        // const foods = parseInt(prompt("메뉴번호를 선택하세요.(1.햄버거, 2.피자, 3.감자튀김)"));
+        
+        // makeFood(foods) ? document.write("맛있게 드세요") : document.write("없는메뉴");
+
+
+
+    </script>
+
+</body>
+
+</html>

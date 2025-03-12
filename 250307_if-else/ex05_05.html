@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문 연습</title>
+</head>
+
+<body>
+
+    <script>
+        // 에금 잔액 100000원
+        // 잔액보다 큰 금액 인출시 : 잔액이 부족합니다.
+        // 5만원 이상 출금시 - 큰 금액을 인출하셨습니다. 인출하시겠습니까?
+        // 30000원을 출금했습니다.
+        // 남은잔액 00원
+
+
+        let account = 100000;
+        let withdraw = parseInt(prompt("인출할 금액을 입력해주세요."));
+
+        if (withdraw < 0) {
+            document.write("잘못된 값입니다.");
+        } else {
+
+            if (account < withdraw) {
+
+                document.write("잔액이 부족합니다. <br>잔액 : " + account);
+
+            } else {
+
+                if (withdraw >= 50000) {
+                    document.write("큰 금액을 인출하셨습니다.");
+                } else {
+                    document.write("적은 금액을 인출하셨습니다.");
+                }
+
+                account -= withdraw;
+                document.write("<br>잔액 : " + account);
+            }
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

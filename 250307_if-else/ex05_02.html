@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 성인만 입장 / 남좌 여우
+       
+        let age = parseInt(prompt("나이를 입력하세요."));
+        let sex = prompt("성별을 입력해 주세요.(남/여)");
+
+        if (age < 0) {
+            document.write("올바른 나이를 입력해 주세요. <br>");
+        } else {
+            if (age >= 20) {
+                document.write("성인입니다. <br>");
+                if (sex === "남") {
+                    document.write("남탕은 오른쪽 입니다.");
+                } else if (sex === "여") {
+                    document.write("여자사우나는 왼쪽입니다. <br>")
+                } else {
+                    document.write("올바른 성별을 입력해 주세요.")
+                }
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

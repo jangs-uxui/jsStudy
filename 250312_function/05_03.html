@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+        // 오류체크 먼저ver
+
+        function makeFood(num) {
+            if (num < 1 || num > 3) {
+                document.write("없는 메뉴를 선택하셨습니다.");
+                return; // 빈 리턴값은 함수에서 빠져나감을 의미
+            } else {
+                document.write("<img src='../media2/food" + num + ".png'>");
+                document.write("<hr>식사 맛있게 하세요.")
+            }
+        } // 함수 정의
+
+        const food = parseInt(prompt("메뉴번호를 선택하세요.(1.햄버거, 2.피자, 3.감자튀김)"));
+        makeFood(food); // 함수 호출
+
+        // return 값이 없는 함수는 변수저장X
+
+        
+
+
+
+
+    </script>
+
+</body>
+
+</html>

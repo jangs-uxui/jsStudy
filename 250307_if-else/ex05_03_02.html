@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 입장료 20,000원
+        // 13세 이하 어린이는 반값
+        // 멤버십이면 10% 할인
+        // (선생님 풀이 - 오류처리X)
+        
+
+        let age = parseInt(prompt("나이를 입력하세요."));
+        let isMember = prompt("멤버십입니까?");
+
+        let price = 20000;
+
+        if (age <= 13) {
+            price = price *0.5;
+        }
+
+        if (isMember === "예") {
+            price = price * 0.9;
+        }
+
+        document.write("최종입장료😃: " + price + "원");
+
+    </script>
+
+
+
+</body>
+</html>

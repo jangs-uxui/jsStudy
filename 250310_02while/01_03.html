@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 반복문</title>
+</head>
+
+<body>
+    <script>
+
+        // 1~100 짝수의 합계
+        // 1~100 홀수의 합계
+        // (1~100 합계는 5050) 2550 | 2500
+
+        // let number = 0;
+        // let evenSum = 0;
+        // let oddSum = 0;
+
+        // while (number < 100) {
+        //     number++;
+        //     if (number % 2 === 1) {
+        //         oddSum = oddSum + number;
+        //     } else {
+        //         evenSum = evenSum + number;
+        //     }
+        // }
+        // document.write("1~100 짝수의 합계: " + evenSum);
+        // document.write("<br>1~100 홀수의 합계: " + oddSum);
+
+
+        // let num = 0;
+        // let evenSum = 0;
+        // let oddSum = 0;
+
+        // while (num < 100) {
+        //     num++;
+        //     if (num % 2 === 0) { // 짝수
+        //         evenSum += num;
+        //     } else {
+        //         oddSum += num;
+        //     }
+        // }
+        // document.write("짝수합: " + evenSum);
+        // document.write("<br>홀수합: " + oddSum);
+
+
+        // let num = 0;
+        // let evenSum = 0;
+        // let oddSum = 0;
+        // while (num < 100) {
+        //     num++;
+        //     if (num % 2 === 0) { // 짝수
+        //         evenSum += num;
+        //     } else { // 홀수
+        //         oddSum += num;
+        //     }
+        // }
+        // document.write("1~100 짝수합: " + evenSum);
+        // document.write("<br>1~100 홀수합: " + oddSum);
+
+
+        let num = 1;
+        let evenSum = 0;
+        let oddSum = 0;
+        while (num <= 100) {
+            if (num % 2 === 0) { // 짝수
+                evenSum = evenSum + num;
+            } else { // 홀수
+                oddSum = oddSum + num;
+            }
+            num++;
+        }
+        document.write("짝수합: " + evenSum);
+        document.write("<br>홀수합: " + oddSum);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

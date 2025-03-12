@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-case문</title>
+</head>
+
+<body>
+    <script>
+
+        // let score = parseInt(prompt("점수를 입력해 주세요."));
+        // let scoreSwitch = Math.floor(score / 10);
+        // // let scoreSwitch = parseInt(score / 10);
+
+        // if (score < 0 || score > 100) {
+        //     document.write("점수를 잘못 입력했습니다.");
+        // } else {
+        //     if (score >= 60) {
+        //         document.write("합격입니다. <br>");
+        //     }
+        //     switch (scoreSwitch) {
+        //         case 10:
+        //         case 9:
+        //             document.write("A등급 입니다.");
+        //             break;
+        //         case 8:
+        //             document.write("B등급 입니다.");
+        //             break;
+        //         case 7:
+        //             document.write("C등급 입니다.");
+        //             break;
+        //         case 6:
+        //             document.write("D등급 입니다.");
+        //             break;
+        //         default:
+        //             document.write("불합격입니다.");
+        //     }
+        // }
+
+        let score = parseInt(prompt("점수를 입력해 주세요."));
+
+        if (score >= 60) {
+            document.write("합격입니다. <br>");
+            let switchNum = Math.floor(score / 10);
+            switch (switchNum) {
+                case 10:
+                case 9:
+                    document.write("A등급입니다");
+                    break;
+                case 8:
+                    document.write("B등급입니다");
+                    break;
+                case 7:
+                    document.write("C등급입니다");
+                    break;
+                case 6:
+                    document.write("D등급입니다");
+                    break;
+            }
+        } else {
+            document.write("불합격입니다.")
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

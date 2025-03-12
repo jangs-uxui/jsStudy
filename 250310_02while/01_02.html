@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 반복문</title>
+</head>
+
+<body>
+    <script>
+
+        // 1 + ~ + 10 더하기
+        // ver1
+        // let number = 0;
+        // let sum = 0;
+        // while (number < 10) {
+        //     number++;
+        //     // sum = sum + number;
+        //     sum += number;
+        // }
+        // document.write("1~10까지 합계 : " + sum);
+
+        // ver2
+        let number = 1;
+        let sum = 0;
+        while (number <= 10) {
+            sum += number;
+            number++;
+        }
+        document.write("1~10까지 합계 : " + sum);
+
+
+    </script>
+</body>
+
+</html>

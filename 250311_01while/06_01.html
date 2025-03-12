@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while-break</title>
+</head>
+
+<body>
+    <script>
+        // 비밀번호 지정
+        // 잘못 입력하면 다시 입력
+        // 3회 실패하면 접근 차단
+
+        const pw = "qwe123";
+        let count = 0;
+        let input = prompt("비밀번호를 입력해 주세요.");
+
+        while (true) {
+            count++;
+
+           if (count === 3) {
+                document.write(count + "회 실패. 접근차단.");
+                break;
+            }
+
+            if (input !== pw) {
+                input = prompt("비밀번호가 " + count + "회 틀렸습니다. 다시 입력해 주세요.");
+            } else {
+                document.write("로그인 성공!");
+                break;
+            }
+            
+        }
+
+        // 3회째 비밀번호 입력시 문제..
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+
+        function max(n1, n2) {
+            
+            return n1 > n2 ? n1 : n2; // 3항연산자: n1이 n2보다 크면 n1 반환, 아니면 n2 반환
+
+            // // ver2
+            // let result
+            // if (n1 > n2) {
+            //     result = n1;
+            // } else {
+            //     result = n2;
+            // }
+            // return result;
+
+            // // ver3
+            // if (n1 > n2) {
+            //     return n1;
+            // } else {
+            //     return n2;
+            // }
+
+        } // 함수정의
+
+        let m = max(3, 5); // 함수호출
+        document.write(m)
+
+    </script>
+
+</body>
+
+</html>

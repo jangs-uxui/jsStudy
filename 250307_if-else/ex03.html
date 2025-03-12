@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중조건문</title>
+</head>
+<body>
+    <script>
+
+        let score = parseInt(prompt("점수를 입력하세요.(0~100)"));
+        
+        if (score >= 90 && score <= 100) {
+            document.write("A등급입니다.");
+        } else if (score >= 80 && score < 90) {
+            document.write("B등급입니다.");
+        } else if (score >= 70 && score < 80) {
+            document.write("C등급입니다.");
+        } else if (score >= 60 && score < 70) {
+            document.write("D등급입니다.");
+        } else if (score >= 0 && score < 60) {
+            document.write("F등급입니다.");
+        } else {
+            document.write("올바른 점수가 아닙니다.");
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

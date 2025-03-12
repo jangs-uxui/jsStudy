@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while-break</title>
+</head>
+
+<body>
+    <script>
+        // 1부터 더해서 총합 100을 처음 넘었을 때 더해진 값
+        // while break 이용해서
+        // (합이 100이 넘으면 break)
+
+        let count = 0;
+        let sum = 0;
+
+        while (true) {
+            count++;
+            sum += count;
+            if (sum > 100) {
+                document.write(sum);
+                break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

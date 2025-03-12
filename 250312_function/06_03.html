@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+    <script>
+
+        // 점수를 전달받아서 A~D 등급 return
+        // 점수 잘못 입력시 다시 입력.
+
+        function getGrade(score) {
+            if (score >= 90 && score <= 100) {
+                return "A";
+            } else if (score >= 80 && score <= 89) {
+                return "B";
+            } else if (score >= 70 && score <= 79) {
+                return "C";
+            } else if (score >= 60 && score <= 69) {
+                return "D";
+            }
+        }
+
+        while (true) {
+
+            let score = parseInt(prompt("점수를 입력해 주세요.(0~100)"));
+
+            if (score < 0 || score > 100) {
+                confirm("점수를 잘못 입력하셨습니다.");
+                continue; // while문 첨으로. 아래무시
+            }
+            if (score >= 60) {
+                document.write("합격 ");
+                // document.write(getGrade(score));
+                let grade = getGrade(score);
+                document.write(grade);
+
+            } else {
+                document.write("불합격");
+            }
+            break;
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

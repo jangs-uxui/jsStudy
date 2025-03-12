@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문</title>
+</head>
+
+<body>
+    <script>
+        // 10~30 까지의 약수(나누어 떨어지는 수) 구하기
+        // 10: 2 5
+        // 11:
+        // 12: 2 3 4 6
+        // 13:
+        // 14: 2 3 7
+        // ...
+
+        // 바깥쪽 for문 i = 10~30
+        // i의 약수 = 2...자기자신 나누어 떨어지는 수.
+        // 연습 필요!!!
+
+        for (let i = 10; i <= 30; i++) {
+            document.write(i + "의 약수 : ");
+
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    document.write(j + " ");
+                }
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

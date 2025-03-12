@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 입장료 20,000원
+        // 13세 이하 어린이는 반값
+        // 멤버십이면 10% 할인
+        // (선생님 풀이 - 오류처리O)
+        // 오류처리는 한번에 묶어서 하면 좋다!
+        // 중복할인 안되게!! - isDiscount 변수 추가
+        // && 하나라도 false 이면 false
+        
+
+        let age = parseInt(prompt("나이를 입력하세요."));
+        let isMember = prompt("멤버십입니까?(예/아니오)");
+
+        let price = 20000;
+        let isDiscount = false; // isDiscount 변수 추가 - 초기값
+
+        if (age < 0 || !(isMember === "예" || isMember === "아니오")) {
+
+            document.write("입력값이 잘못되었습니다.");
+
+        } else {
+            if (age <= 13) {
+            document.write("어린이할인이 되었습니다.");
+            price = price * 0.5;
+            isDiscount = true;
+        } else if (!isDiscount && age >= 65) {
+            document.write("노인할인이 되었습니다.");
+            price = price * 0.7;
+            isDiscount = true;
+        }
+
+        if (!isDiscount && isMember === "예") {
+            document.write("멤버십 할인이 되었습니다.");
+            price = price * 0.9;
+            isDiscount = true;
+        }
+
+        document.write("<br>최종입장료😃: " + price + "원");
+
+        }
+
+        
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while-break</title>
+</head>
+
+<body>
+    <script>
+        // 1부터 더해서 총합 100을 처음 넘었을 때 더해진 값
+        // while break 이용해서
+        // (합이 100이 넘으면 break)
+
+        let count = 0;
+        let sum = 0;
+
+        while (true) {
+            count++;           
+            sum = sum + count;
+            
+            if (sum > 100) {
+                document.write("1부터 더해서 100이 처음 넘었을 때 더해진 값: " + sum + "<br>");
+                break; // break 걸리는 순간 바로 while문을 빠져나감.
+            }
+        }
+        document.write(count);
+
+        // let sum = sum + count; (X)
+        // sum + count가 먼저 계산되므로 변수sum이 먼저 선언되 있어야 함.
+
+
+        // 반복횟수가 정해진 경운 for문 많이 사용 
+        // 반복횟수가 정해지지 않은 경우 while문 많이 사용
+
+    </script>
+</body>
+
+</html>

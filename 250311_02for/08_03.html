@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문</title>
+</head>
+
+<body>
+    <script>
+        // 2~100까지의 소수의 개수 출력
+        // 소수란? 1과 자기자신 이외의 숫자로 나누어 지지 않는 수
+        // (약수의 개수가 0개인 것이 소수)
+        // (약수의 개수를 셀 변수, 소수의 개수를 셀 변수)
+        // 정답 25
+
+
+        let primeNumCount = 0; // 소수의 개수를 셀 변수
+
+        for (let i = 2; i <= 100; i++) {
+
+            let count = 0; // 약수의 개수를 셀 변수
+            for (let j = 2; j <= (i / 2); j++) {
+
+                if (i % j === 0) { // j 가 i 의 약수
+                    count++; // 약수의 개수
+                }
+            }
+
+            if (count === 0) {
+                primeNumCount++;
+                document.write(i + " ");
+            }
+        }
+        document.write("<br>2~100까지 소수의 개수: " + primeNumCount + "<hr>");
+
+
+        // 연습
+
+        for (let i = 2; i <= 100; i++) {
+
+            document.write(i + "의 약수 : ");
+
+            let count = 0;
+            for (let j = 2; j <= (i / 2); j++) {
+
+                if (i % j === 0) {
+                    document.write(j + " ");
+
+                    count++;
+                }
+
+            }
+
+            if (count === 0) {
+                // 하는중..
+            }
+
+            document.write("<br>");
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

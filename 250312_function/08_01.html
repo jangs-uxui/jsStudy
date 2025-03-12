@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 기본요금 3000
+        // 10km이하 500원/km, 10km초과 700원/km
+        // 22시~6시 20% 할증
+        // 잘못된 입력시 재입력
+
+        function calcFare(distance, time) {
+            let basicFare = 3000;
+            let distanceCharge = 0;
+
+            if (distance <= 10) {
+                distanceCharge = distance * 500;
+            } else {
+                distanceCharge = (10 * 500) + (distance - 10) * 700;
+            }
+
+            let totalFare = basicFare + distanceCharge;
+
+            if (time >= 22 || time < 6) {
+                totalFare *= 1.2;
+            }
+
+            return totalFare;
+        }
+
+        while (true) {
+
+            let distance = parseInt(prompt("이동할 거리를 입력하세요.(km)"));
+            let time = parseInt(prompt("탑승시간을 입력하세요."));
+
+            if (distance < 1 || time >= 24) {
+                alert("입력이 잘못되었습니다.");
+                continue;
+            }
+            let fare = calcFare(distance, time);
+            document.write("택시이용요금: " + fare);
+            break;
+
+        }
+
+
+        // 선생님풀이
+        // function totalFare(distance, hour) {
+        //     let baseFare = 3000;
+        //     let perKmFare = 0;
+
+        //     if (distance <= 10) {
+        //         perKmFare = 500;
+        //     } else {
+        //         perKmFare = 700;
+        //     }
+
+        //     let totalFare = baseFare + (distance * perKmFare);
+
+        //     if (hour >= 22 || hour <= 6) {
+        //         totalFare = totalFare * 1.2;
+        //     }
+
+        //     return totalFare;
+        // }
+
+        // while (true) { // 입력값 잘못될때 재입력
+        //     let distance = parseInt(prompt("이동거리를 입력하세요(km)"));
+        //     let hour = parseInt(prompt("탑승 시간을 입력하세요(0~23)"));
+
+        //     if (distance < 1 || hour < 0 || hour > 24) {
+        //         alert("입력값이 잘못되었습니다.");
+        //         continue;
+        //     }
+
+        //     let fare = totalFare(distance, hour);
+        //     document.write("최종 택시 요금: " + fare + "원");
+        //     break;
+        // }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

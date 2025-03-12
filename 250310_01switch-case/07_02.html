@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-case문</title>
+</head>
+
+<body>
+    <script>
+
+        let score = parseInt(prompt("점수를 입력해 주세요."));
+        let switchScore = Math.floor(score / 10); // 소수점이하 버림
+        if (score < 0 || score > 100) {
+            document.write("점수를 잘못 입력하였습니다.");
+        } else {
+            if (score >= 60) {
+                document.write("합격입니다. <br>");
+                switch (switchScore) {
+                    case 10:
+                    case 9:
+                        document.write("A등급");
+                        break;
+                    case 8:
+                        document.write("B등급");
+                        break;
+                    case 7:
+                        document.write("C등급");
+                        break;
+                    case 6:
+                        document.write("D등급");
+                        break;
+                }
+            } else {
+                document.write("불합격입니다.");
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

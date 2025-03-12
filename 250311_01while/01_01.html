@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        // 1~100 중에 3의 배수는 몇개일까?
+        
+        // let num = 0;
+        // let length = 0;
+        // while (num <= 100) {
+        //     num++;
+        //     if (num % 3 === 0) {
+        //         length = length + 1;
+        //     }
+        // }
+        // document.write(length);
+
+
+
+        // let num = 0;
+        // let count = 0;
+
+        // while (num <= 100) {
+        //     num++;
+        //     if (num % 3 === 0) {
+        //         count++;
+        //         console.log(num);
+        //     }
+        // }
+        // document.write("0~100까지 3배수 개수: ", count);
+
+
+        
+        let num = 0;
+        let count = 0;
+        let sum = 0;
+
+        while (num <= 100) {
+            num++;
+            if (num % 3 === 0) {
+                count++;
+                sum = sum + num;
+            }
+        }
+        document.write("0~100까지 3배수 개수: ", count);
+        document.write("<br>0~100까지 3배수 합: ", sum);
+
+
+
+
+     </script>
+</body>
+</html>

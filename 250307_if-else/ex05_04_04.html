@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+
+<body>
+
+    <script>
+        // prompt 구매금액 입력하세요. 
+        // VIP 회원입니까?
+        // (5만원이상 10% / 3만원이상 5% / VIP회원이면 5% 추가할인)
+        // 중복할인 가능 ex)VIP이고 5만원 이상이면 15% 할인
+
+        let price = parseInt(prompt("구매금액을 입력하세요."));
+        let isVip = prompt("VIP 회원입니까?(예/아니오)");
+        let discountRatio = 0;
+
+        if (price >= 50000) {
+            discountRatio = discountRatio + 0.1;
+        } else if (price >= 30000) {
+            discountRatio = discountRatio + 0.05;
+        }
+
+        if (isVip === "예") {
+            discountRatio = discountRatio + 0.05;
+        }
+
+        // let finalPrice = price * (1 - discountRatio);
+        price = price * (1 - discountRatio);
+
+        document.write("최종 결제금액 : " + price + "<br>할인률 : " + parseInt(discountRatio * 100) + "%");
+
+
+    </script>
+
+
+
+</body>
+
+</html>

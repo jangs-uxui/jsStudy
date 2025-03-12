@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 입력한 숫자들의 합계 (5번 입력)
+        // let number = 0;
+        // let input = 0;
+        // let sum = 0;
+        // while (number < 5) {
+        //     number++;
+        //     input = parseInt(prompt(number + "번째 숫자를 입력해 주세요."));
+        //     sum = input + sum;
+        // }
+        // document.write(sum);
+
+
+        
+        // count 1로 시작 / input 변수 while문 안에 선언(안에서만 쓰이니까);
+        let count = 1;
+        let sum = 0;
+        while (count <= 5) {
+            let input = parseInt(prompt(count + "번째 숫자를 입력해 주세요."));
+            sum = sum + input;
+            count++
+        }
+        document.write(sum);
+
+
+    </script>
+</body>
+</html>

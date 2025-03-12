@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //나이, 멤버십여부 입력받아 할인률 return 해주는 함수
+        //정가 2만, 13세이하 50%, 60세이상 30% / 멤버십 10%(중복O) 할인
+        //멤버십여부 true,false로 입력(confirm)
+
+        function discountRatio(age, isMember) {
+            let ratio = 1;
+            if (age <= 13) {
+                ratio = 0.5;
+            } else if (age >= 60) {
+                ratio = 0.7;
+            }
+            if (isMember) {
+                ratio *= 0.9;
+            }
+            return ratio;
+        }
+
+        let price = 20000;
+        let age = parseInt(prompt("나이를 입력하세요."));
+        let isMember = confirm("멤버십입니까?");
+
+        if (age < 0) {
+            document.write("나이를 올바르게 입력해 주세요");
+        } else {
+            let ratio = discountRatio(age, isMember);
+            document.write("입장료: " + price * ratio);
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

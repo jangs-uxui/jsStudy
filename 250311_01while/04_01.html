@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let count = 0;
+        let sum = 0;
+
+        while (true) { 
+            // 무한반복: 반복횟수를 알수 없을 때 (특정조건이 될 때 나감)
+            // break명령이 실행되야 while문 밖으로 빠져나감
+            let number = parseInt(prompt("숫자를 입력하세요."));
+            if (number === 5) {
+                break;
+            }
+            sum += number;
+        }
+        document.write("입력한 숫자의 총합: " + sum);
+
+        
+
+
+    </script>
+</body>
+
+</html>

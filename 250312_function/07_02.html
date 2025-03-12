@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //입장료를 계산해서 return 해주는 함수
+        // 입력값 잘못되었을 때 재입력
+
+        function fee(age, isMember) {
+            let price = 20000;
+            if (age <= 13) {
+                price = price * 0.5;
+            } else if (age >= 60) {
+                price = price * 0.7;
+            }
+            if (isMember === "예") {
+                price = price * 0.9;
+            }
+            return price;
+        }
+
+        while (true) {
+
+            let age = parseInt(prompt("나이를 입력하세요."));
+            let isMember = prompt("멤버십입니까?(예/아니오)");
+
+            if (age < 0 || !(isMember === "예" || isMember === "아니오")) {
+                alert("입력값이 잘못 되었습니다.");
+                continue;
+            } 
+
+            let price = fee(age, isMember);
+
+            document.write("입장료는: " + price);
+            break;
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

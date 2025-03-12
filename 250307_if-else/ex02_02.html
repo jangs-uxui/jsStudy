@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중조건문</title>
+</head>
+<body>
+    <script>
+
+        let coupon = parseInt(prompt("쿠폰 개수를 입력하세요."));
+        document.write("쿠폰이 " + coupon + "장 있습니다. <hr>");
+        if (coupon >= 20) {
+            document.write("여행용가방");
+        } else if (coupon >= 10) {
+            document.write("다이어리");
+        } else {
+            document.write("커피 한 잔");
+        }
+        
+
+    </script>
+</body>
+</html>

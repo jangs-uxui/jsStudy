@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 거리 / 탑승시간(0~24) 입력
+        // 기본요금 3000원 /
+        // 거리가 10km 이하 1km당 500원 / 10km 초과 700원
+        // 할증시간 오후10시 ~ 오전10시 (22시~6시)
+        // 할증시간 20% 추가요금
+
+        let distance = parseInt(prompt("이동거리를 입력해 주세요."));
+        let time = parseInt(prompt("탑승시간을 입력해 주세요."));
+        let charge = 0;
+        let baseFare = 3000;
+
+        if (distance <= 10) {
+            charge = distance * 500 + baseFare;
+        } else {
+            charge = (distance - 10) * 700 + 5000 + baseFare;
+        }
+
+        if (time >= 22 || time < 6) {
+            // charge = charge * 1.2;
+            charge *= 1.2;
+        }
+
+        document.write(time + "시에 " + distance + "km 이동한 택시요금은 " + charge + "원 입니다.");
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
