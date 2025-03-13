@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 (function)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 사칙연산 선택 - 연산을 선택하세요(1:덧셈, 2:뺄셈,, 3:곱셈, 4:나눗셈
+        // 사칙연산 부분만 함수지정
+
+        function calc(select, num01, num02) {
+            let result = 0;
+            if (select === 1) {
+                result = num01 + num02;
+            } else if (select === 2) {
+                result = num01 - num02;
+            } else if (select === 3) {
+                result = num01 * num02;
+            } else if (select === 4) {
+                result = num01 / num02;
+            }
+            return result;
+        }
+
+        while (true) {
+
+            let select = parseInt(prompt("연산을 선택하세요(1:덧셈, 2:뺄셈,, 3:곱셈, 4:나눗셈"));
+
+            if (select < 1 || select > 4) {
+                alert("입력값이 잘못되었습니다.");
+                continue;
+            }
+
+            let num01 = parseInt(prompt("첫번째 숫자 입력"));
+            let num02 = parseInt(prompt("두번째 숫자 입력"));
+
+            let result = calc(select, num01, num02);
+            document.write("연산결과: " + result);
+            break;
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열Array</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 빈 배열 선언하기
+        let arr = [];
+        arr[0] = 23; // 데이터 추가 가능(스크립트 언어의 유연성 / 컴파일 언어는 불가)
+        arr[1] = 12;
+        arr[2] = 34;
+        for (let i = 0; i < 3; i++) {
+            document.write(`arr[${i}]`);
+        }
+
+
+
+        // 일반적 배열 선언 (권장)
+        let arr = [10, 20, 30, 40, 50];
+        
+        let arr2 = new Array(10, 20, 30, 40, 50);
+        //생성자 함수 이용해 배열 생성 가능 (비권장:모호한 표기방식,조금느림)
+
+        let arr3 = new Array(5); // 빈 5개의 배열 생성.
+
+    </script>
+
+
+
+
+</body>
+
+</html>

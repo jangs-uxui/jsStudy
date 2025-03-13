@@ -11,14 +11,14 @@
     <script>
 
         function repeatString(str, times) {
-            let result = "";
+            let result = ""; //빈 문자열 선언. (null은 비어있다는 명시적 표현이지만 type는 미정)
             for (let i = 0; i < times; i++) {
                 result = result + str + " ";
             }
             return result;
         }
 
-        document.write(repeatString("abc", 3));
+        document.write(repeatString("abc", 20));
 
 
     </script>

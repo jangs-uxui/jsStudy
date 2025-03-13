@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+
+<body>
+
+    <h1 id="alter">Change Color</h1>
+
+    <button onclick="change('red','20px')">빨강</button>
+    <button onclick="change('blue','20px')">파랑</button>
+    <button onclick="change('green','20px')">초록</button>
+
+    <script>
+
+        function change(colors,fontSize) {
+            const alter01 = document.getElementById("alter");
+            alter01.style.color = colors;
+            alter01.style.fontSize = fontSize;
+        }
+
+    </script>
+
+</body>
+
+</html>

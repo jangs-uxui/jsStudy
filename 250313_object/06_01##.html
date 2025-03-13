@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열Array</title>
+</head>
+
+<body>
+
+    <script>
+        //prompt로 계속 더함 (while 반복문)
+        // -1 입력시 입력된 숫자 나열, 합계, 평균 출력
+
+
+
+        let arr = [];
+        let index = 0;
+        let sum = 0;
+
+        while (true) {
+
+            let input = parseInt(prompt("숫자를 입력해 주세요."));
+            if (isNaN(index)) {
+                alert("숫자를 입력해 주세요");
+                continue;
+            }
+            if (input === -1) {
+                break;
+            }
+            
+            arr[index] = input;
+            sum = sum + input; // sum = sum + arr[index];
+            document.write(input + " "); // document.write(arr[index] + " ");
+            index++;
+        }
+
+        let avg = sum / arr.length;
+        document.write(`<hr>합계: ${sum} <br>평균: ${avg}`);
+
+
+
+
+        // let arr = [];
+        // let count = 0;
+        // let sum = 0;
+
+        // while (true) {
+        //     let input = parseInt(prompt("숫자를 입력해 주세요"));
+
+        //     if (input === -1) {
+        //         break;
+        //     }
+
+        //     arr[count]= input;
+        //     sum = sum + input;
+        //     document.write(input + " "); // 숫자 나열
+        //     count++;              
+        // }
+
+        // let avg = sum / arr.length;
+        // document.write(`<br>합계: ${sum} <br>평균: ${avg}`);
+
+
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

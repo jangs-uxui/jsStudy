@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수, 지역변수 - 함수와 변수의 범위</title>
+</head>
+
+<body>
+
+
+    <script>
+     
+        let global = "전역";
+
+        function test() { // 함수 정의
+            let local = "지역";
+            document.write("함수 안 global = " + global + "<hr>");
+            document.write("함수 안 local = " + local + "<hr>");
+        }   
+
+        test(); //함수 호출
+
+        document.write("함수 밖 global = " + global + "<hr>");
+        document.write("함수 밖 local = " + local + "<hr>"); // 함수 바깥에서 지역변수 호출되지 않음
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열Array</title>
+</head>
+
+<body>
+
+    <script>
+        //prompt로 계속 더함 (while 반복문)
+        // -1 입력시 입력된 숫자 나열, 합계, 평균 출력
+
+        // 모듈화(1.입력 2.계산 3.출력)
+        // 모듈화, 함수화 하면 다양한 상황에서 사용 가능(재사용성↑)
+
+
+        let arr = [];
+        let index = 0;
+        let sum = 0;
+
+        while (true) {
+
+            let input = parseInt(prompt("숫자를 입력해 주세요."));
+            if (isNaN(index)) {
+                alert("숫자를 입력해 주세요");
+                continue;
+            }
+            if (input === -1) {
+                break;
+            }
+            
+            arr[index] = input;
+            index++;
+        }
+
+        // 2.계산
+        for(let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+
+        let avg = sum / arr.length;
+
+        // 3.출력
+        for (let i = 0; i <arr.length; i++) {
+            document.write(arr[i] + " ");
+        }
+
+        document.write("<br> 합계 : " + sum);
+        document.write("<br> 합계 : " + avg);
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
