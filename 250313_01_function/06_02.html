@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿문자열(``)</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // for문 안에서 선언된 변수는  반복될때마다 생성과 소멸을 반복함.
+        // 반복변수는  for문 시작떄 생성, for문 닫힐때 소멸.
+
+
+        let drink = prompt(`한 잔 따른다. 
+        "이거 마시면    사귀는거다"`); // ``으로 싸면 줄바꿈, 띄어쓰기 그대로 들어감.
+
+        if (drink === "yes") {
+            document.write(`답: ${drink} 오늘부터 1일`);
+            // document.write("답: " + drink + "오늘부터 1일"); 
+        } else {
+            document.write(`답: ${drink} 헤어진다`);
+            // document.write("답: " + drink + "헤어진다");
+        }
+
+        prompt(`한잔    따른다.
+"이거 마시면 사귀는거다"`)
+
+
+
+    </script>
+
+</body>
+
+</html>

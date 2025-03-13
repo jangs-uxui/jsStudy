@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+
+<body>
+
+    음식 1개당 1200원 입니다. 얼마 내실래요?
+    <hr>
+
+    <input type="text" id="inputBox">
+    <button onclick="randomFood()">주문</button>
+
+    <script>
+        // Math.floor()    주어진 숫자를 버림하여 가장 가까운 정수로 변환하는 JavaScript 내장 함수
+        // Math.random() * 3    0이상 3미만 실수의 난수 
+
+        // function randomFood() {
+        //     const money = parseInt(document.getElementById('inputBox').value);
+        //     const fnum = Math.floor(money / 1200);
+        //     const change = money - (fnum * 1200);
+        //     if (money >= 1200) {
+        //         for (let i = 1; i <= fnum; i++) {
+        //             let food = Math.floor(Math.random() * 3) + 1; // 1~3 난수
+        //             document.write(i + "<img src='../media2/food" + food + ".png'>");
+        //         }
+        //         document.write("<h3>합: " + fnum * 1200 + ", 반환: " + change + "</h3>");
+        //     } else document.write("금액이 모자랍니다.");
+        // }
+
+        function randomFood() {
+            const money = parseInt(document.getElementById("inputBox").value);
+            const fnum = Math.floor(money / 1200);
+            const change = money - (fnum * 1200);
+            if (money >= 1200) {
+                for (let i = 1; i <= fnum; i++) {
+                    let foodNum = Math.floor(Math.random() * 3) + 1;
+                    document.write(i + `<img src="../media2/food${foodNum}.png">`);
+                }
+                document.write(`<h3>합: ${fnum * 1200}, 반환: ${change}</h3>`);
+            } else 
+            document.write("금액이 모자랍니다.");
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

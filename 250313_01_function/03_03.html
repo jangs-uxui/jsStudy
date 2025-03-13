@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+
+<body>
+
+    <h1 id="a1">Color</h1>
+    <button onclick="changeColor('blue')">blue</button>
+    <button onclick="changeColor('red')">red</button>
+    <button onclick="changeColor('green')">green</button>
+    
+    <hr>
+    
+    <h1 id="a2">Background</h1>
+    <button onclick="changeBg('aqua')">aqua</button>
+    <button onclick="changeBg('palegreen')">palegreen</button>
+    <button onclick="changeBg('antiquewhite')">antiquewhite</button>
+    
+    <hr>
+    
+    <h1 id="a3">Fontweight</h1>
+    <button onclick="changeWeight('lighter')">lighter</button>
+    <button onclick="changeWeight('normal')">normal</button>
+    <button onclick="changeWeight('bold')">bold</button>
+    
+    <hr>
+    
+    <button onclick="changeSize('100px','100px')">100 X 100</button>
+    <button onclick="changeSize('150px','120px')">150 X 120</button>
+    <button onclick="changeSize('200px','140px')">200 X 140</button>
+    <div id="box" style="width:100px;height:100px;background-color:#666;"></div>
+
+    <script>
+        function changeColor(colors) {
+            const alter = document.getElementById("a1");
+            alter.style.color = colors;
+        }
+        // const changeColor = (colors) => document.getElementById("a1").style.color = colors;
+
+        function changeBg(colors) {
+            document.getElementById("a2").style.backgroundColor = colors;
+        }
+        // const changeBg = colors => document.getElementById("a2").style.backgroundColor = colors;
+
+        function changeWeight(weight) {
+            document.getElementById("a3").style.fontWeight = weight;
+        }
+        // const changeWeight = weight => document.getElementById('a3').style.fontWeight = weight;
+
+        function changeSize(width, height) {
+            const box = document.getElementById("box");
+            box.style.width = width;
+            box.style.height = height;
+        }
+        // const changeSize = (width, height) => {
+        //     const box = document.getElementById("box");
+        //     box.style.width = width;
+        //     box.style.height = height;
+        // }
+
+
+    </script>
+
+</body>
+
+</html>
