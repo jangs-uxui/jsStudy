@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열객체의 메써드</title>
+</head>
+
+<body>
+    <script>
+        // concat()
+        // pop()    배열맨뒤 값 삭제후 반환
+        // push(x)  배열 맨 뒤에 x 삽입
+        // let arr2 = arr.slice(1,3)   arr[1]~arr[2] 복사하여 arr2로 반환
+
+
+        let a1 = [0, 1, 2, 3, 4];
+        let a2 = [9, 8, 7, 6, 5];
+        document.write(`a1 = [${a1}]<br>`);
+        document.write(`a2 = [${a2}]<hr>`);
+
+        document.write(`a1.concat(a2) : ${a1.concat(a2)}<hr>`);
+
+        function gt(e) { return e >= 7 };
+        document.write(`a2.filter(gt) : ${a2.filter(gt)}<hr>`);
+
+        document.write(`a2.indexOf(6) : ${a2.indexOf(6)}<hr>`);
+
+        a2.push(4);
+        document.write(`a2.push(4) : ${a2}<hr>`);
+
+        a2.pop();
+        document.write(`a2.pop() : ${a2}<hr>`);
+
+        document.write(`a1.reverse() : ${a1.reverse()}<hr>`);
+
+        a2.shift();
+        document.write(`a2.shift() : ${a2}<hr>`);
+        a2.unshift(9);
+        document.write(`a2.unshift(9) : ${a2}<hr>`);
+
+        document.write(`a2.slice(1, 4) : ${a2.slice(1, 4)}<hr>`);
+
+        document.write(`a2.sort() : ${a2.sort()}<hr>`);
+
+        document.write(`a2.join("+") : ${a2.join("+")}<hr>`);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

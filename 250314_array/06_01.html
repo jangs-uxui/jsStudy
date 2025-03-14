@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열(sort)</title>
+</head>
+
+<body>
+    <!-- input에 입력후 변경버튼 누르면 아래 출력되도록 -->
+     <!-- 태그객체.innerText = "내용" -->
+
+
+    <input type="text" id="input" value="sdf">
+    <button onclick="createText()">텍스트 변경</button>
+    <button onclick="colorChange('red')">빨강</button>
+    <button onclick="colorChange('blue')">파랑</button>
+    <button onclick="colorChange('green')">초록</button>
+    <h1 id="textBox"></h1>
+    <hr>
+
+    <script>// 태그보다 아래 있어야 함.
+        function createText() {
+            let textBox = document.getElementById("textBox");
+            textBox.innerText = document.getElementById("input").value;
+        }
+
+        function colorChange(color) {
+            let textBox = document.getElementById("textBox");
+            textBox.style.color = color;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열객체의 메써드</title>
+</head>
+
+<body>
+    <script>
+        // filter(함수의 정의)  함수 호출이 아닌 '함수의 정의'가 들어감 / 이름없는함수, 화살표 함수 바로 들어가기도 함.
+
+        let arr = [10, 30, 4, 3, -2, -3, 25];
+
+        function negative(e) { return e < 0; } // 음수 이면 true 반환
+        document.write(arr.filter(negative) + "<br>"); // -2, -3  return
+        document.write(arr.filter(function(e){return e < 0}) + "<br>");
+        document.write(arr.filter((e) => e < 0) + "<br>");
+
+        let filterArr = arr.filter(negative);
+        document.write(filterArr + "<hr>");
+
+
+
+
+
+    </script>
+</body>
+
+</html>

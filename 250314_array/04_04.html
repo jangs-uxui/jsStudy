@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열</title>
+</head>
+
+<body>
+    <script>
+        // 0~100 10개의 난수 생성 => 배열로 만들기
+
+
+        let randomArr = [];
+        for (let i = 0; i < 10; i++) {
+            let randomInt = Math.floor(Math.random() * 101);
+            randomArr.push(randomInt)
+        }
+        document.write(randomArr + "<hr>");
+
+
+        // 60점 이상만 모아서 새 배열에 정리
+
+        let result = randomArr.filter((e) => e >= 60);
+        document.write(result + "<br>");
+
+        // 등급 새 배열에 정리
+
+        // 연습1
+        let grade = result.map((e) => {
+            if (e >= 90) {
+                return "A";
+            } else if (e >= 80) {
+                return "B";
+            } else if (e >= 70) {
+                return "C";
+            } else if (e >= 60) {
+                return "D";
+            }
+        });
+        document.write(grade + "<br>");
+
+        // 연습2 (이름있는함수, switch)
+        function grading(e) {
+            let result = Math.floor(e / 10);
+            switch (result) {
+                case 10:
+                case 9:
+                    return "A";
+                    break;
+                case 8:
+                    return "B";
+                    break;
+                case 7:
+                    return "C";
+                    break;
+                case 6:
+                    return "D";
+            }
+        }
+        let grade2 = result.map(grading);
+        document.write(grade2 + "<br>");
+
+
+
+    </script>
+</body>
+
+</html>

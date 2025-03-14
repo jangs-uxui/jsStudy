@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열</title>
+</head>
+
+<body>
+    <script>
+        // 0~100 10개의 난수 생성 => 배열로 만들기
+        
+        // Math.random() * 3    0이상 3미만 실수 난수
+        // Math.floor
+
+        // 연습1
+        // let randomArr = [];
+        // for (let i = 0; i < 10; i++) {
+        //     let randomInt = Math.floor(Math.random() * 101);
+        //     randomArr[i] = randomInt;
+        // }
+        // document.write(randomArr);
+
+
+        // push 사용
+        // let randomArr = [];
+        // for (let i = 0; i < 10; i++) {
+        //     let randomInt = Math.floor(Math.random() * 101);
+        //     randomArr.push(randomInt);
+        // }
+        // document.write(randomArr);
+
+
+        // 연습2
+        let randomArr = [];
+        for (let i = 0; i < 10; i++) {
+            // randomArr[i] = Math.floor(Math.random() * 101);
+
+            let randomInt = Math.floor(Math.random() * 101);
+            randomArr.push(randomInt)
+        }
+        document.write(randomArr);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

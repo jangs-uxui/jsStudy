@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열객체의 메써드</title>
+</head>
+
+<body>
+    <script>
+
+        // map(함수의 정의) 함수 호출이 아닌 '함수의 정의'가 들어감
+        // 배열의 데이터를 하나씩 가져와서 함수를 돌려 새 배열에 넣음.
+        // (기존 배열과 갯수가 같음)
+
+        // 짝수에는 +10 홀수에는 +20 (low level)
+
+        let arr = [10, 30, 4, 3, -2, -3, 25];
+
+        let mapArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                mapArr[i] = arr[i] + 10;
+            } else {
+                mapArr[i] = arr[i] + 20;
+            }
+        }
+
+        document.write(mapArr);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

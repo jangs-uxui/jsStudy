@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열(sort)</title>
+</head>
+
+<body>
+    <script>
+        // sort()
+        // 들어가는 함수 매개변수 2개 (a, b)
+        // a - b 양수이면 바꾸고 음수이면 안바꿈
+        // 기존 배열을 바꾸고 그 위치값(바로가기?/참조값)을 return 함
+
+        // 0~100 10개의 난수 생성 => 배열로 만들기
+        let randomArr = [];
+        for (let i = 0; i < 10; i++) {
+            let randomInt = Math.floor(Math.random() * 101);
+            randomArr.push(randomInt)
+        }
+        document.write(randomArr + "<hr>");
+
+
+        let sortArr = randomArr.sort((a, b) => a - b); // 오름차순
+        // let sortArr = randomArr.sort((a, b) => b - a); // 내림차순
+        // document.write(sortArr + "<br>");
+        document.write(randomArr + "<br>");
+
+
+
+
+    </script>
+</body>
+
+</html>
