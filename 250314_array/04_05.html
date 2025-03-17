@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열</title>
+</head>
+
+<body>
+    <script>
+        // 1. 0~100 10개의 난수 생성 => 배열로 만들기
+        let randomArr = [];
+        for (let i = 0; i < 10; i++) {
+            randomArr[i] = Math.floor(Math.random() * 101);
+        }
+        document.write(randomArr + "<hr>");
+
+
+        // 2. 60점 이상 합격, 이만 불합격 새 배열(map)
+        let ispassedArr = randomArr.map((e) => {
+            if (e >= 60) {
+                return "합격";
+            } else {
+                return "불합격";
+            }
+        });
+        document.write(ispassedArr + "<hr>");
+
+
+        // 3. 60점 이상만 모아서 새 배열에 정리(filter)
+        let passedArr = randomArr.filter((e) => e >= 60);
+        document.write(passedArr + "<hr>");
+
+
+        // 3. (60이상) 등급 새 배열에 지정 (map, switch-case)
+        // 이름있는함수
+        function grading(e) {
+            let gradingNum = parseInt(e / 10);
+            switch (gradingNum) {
+                case 10:
+                case 9:
+                    return "A";
+                    break;
+                case 8:
+                    return "B";
+                    break;
+                case 7:
+                    return "C";
+                    break;
+                case 6:
+                    return "D";
+            }
+        }
+        let gradeArr = passedArr.map(grading);
+        document.write(gradeArr + "<hr>");
+
+        // 화살표함수
+        let gradeArr2 = passedArr.map((e) => {
+            let gradeScore = Math.floor(e / 10);
+            switch (gradeScore) {
+                case 10:
+                case 9:
+                    return "A";
+                    break;
+                case 8:
+                    return "B";
+                    break;
+                case 7:
+                    return "C";
+                    break;
+                case 6:
+                    return "D";
+            }
+        })
+        document.write(gradeArr2 + "<hr>");
+
+
+
+
+    </script>
+</body>
+
+</html>

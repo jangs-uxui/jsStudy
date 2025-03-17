@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - 배열(sort)</title>
+</head>
+
+<body>
+    <script>
+        // sort()
+        // 들어가는 함수 매개변수 2개 (a, b)
+        // a - b 양수이면 바꾸고 음수이면 안바꿈
+        // *기존 배열을 바꾸고 그 위치값(바로가기?/참조값)을 return 함
+
+        let randomArr = [7, 22, 32, -24, 3, 6, 10, -22, 48, 17];
+
+        let sortArr = randomArr.sort((a, b) => {
+            return a - b; // 오름차순 (1,2,3)
+            return b - a; // 내림차순 (3,2,1)
+        });
+        document.write(sortArr + "<br>");
+
+
+        // arr.sort((a, b) => a - b) // 오름차순
+        // arr.sort((a, b) => b - a) // 내림차순
+
+
+
+    </script>
+</body>
+
+</html>

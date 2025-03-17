@@ -19,14 +19,14 @@
         document.write(`a1.concat(a2) : ${a1.concat(a2)}<hr>`);
 
         function gt(e) { return (e >= 7) }; // 7이상이면 true
-        document.write(`a2.filter(gt) : ${a2.filter(gt)}<hr>`);
+        document.write(`a2.filter(gt) : ${a2.filter(gt)}<hr>`); // 함수 조건에 맞는 배열 반환
 
-        document.write(`a2.indexOf(9) : ${a2.indexOf(7)}<hr>`);
+        document.write(`a2.indexOf(9) : ${a2.indexOf(7)}<hr>`); // 문자열이 처음 나타나는 index 반환, 없으면 -1반환
 
-        a2.push(4);
+        a2.push(4); // 맨뒤에 삽입
         document.write(`a2.push(4) : ${a2}<hr>`);
 
-        a2.pop();
+        a2.pop(); // 맨 뒤의 값 삭제
         document.write(`a2.pop() : ${a2}<hr>`);
 
         a2.shift(); //맨 앞 원소 삭제후 한칸 당김
@@ -37,9 +37,11 @@
 
         document.write(`a2.slice(1, 4) : ${a2.slice(1, 4)}<hr>`); // index1~3 반환
 
-        document.write(`a2.sort() : ${a2.sort()}<hr>`);
+        document.write(`a2.sort() : ${a2.sort()}<hr>`); // 배열순서 정렬
 
-        document.write(`a2.join("/") : ${a2.join("+")}`);
+        document.write(`a2.join("+") : ${a2.join("+")}<hr>`);
+
+        document.write(`a1.reverse() : ${a1.reverse()}`);
 
 
 

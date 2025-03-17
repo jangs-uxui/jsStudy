@@ -14,12 +14,24 @@
         let arr = [10, 30, 4, 3, -2, -3, 25];
 
         function negative(e) { return e < 0; } // 음수 이면 true 반환
+
         document.write(arr.filter(negative) + "<br>"); // -2, -3  return
-        document.write(arr.filter(function(e){return e < 0}) + "<br>");
-        document.write(arr.filter((e) => e < 0) + "<br>");
+        document.write(arr.filter(function (e) { return e < 0 }) + "<br>"); // 이름없는함수
+        document.write(arr.filter((e) => e < 0) + "<br>"); // 화살표함수
 
         let filterArr = arr.filter(negative);
         document.write(filterArr + "<hr>");
+
+
+
+        let array = [10, 30, 4, 3, -2, -3, 25];
+
+        function negative(e) { return e < 0 };
+        document.write(array.filter(negative) + "<br>");
+
+        document.write(array.filter(function (e) { return e < 0 }) + "<br>");
+
+        document.write(array.filter((e) => e < 0) + "<br>");
 
 
 
