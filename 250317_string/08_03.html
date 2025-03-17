@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+
+<body>
+
+    <textarea id="textarea" cols="40" rows="6"></textarea>
+    <br>
+    <button onclick="capitalize()">변환</button>
+    <hr>
+    <p id="result">결과 : </p>
+
+
+    <script>
+        // 단어 첫 글자 대문자로 변환 aaa bbb ccc => Aaa Bbb Ccc
+        // 배열로(split) > 첫글자대문자(toUpperCase) > 문자열 붙임(join)
+
+        // for문
+        // function capitalize() {
+        //     const inputArr = document.getElementById("textarea").value.split(" ");
+        //     let newArr = [];
+        //     for (let i = 0; i < inputArr.length; i++) {
+        //         newArr[i] = inputArr[i].charAt(0).toUpperCase() + inputArr[i].slice(1);
+        //     }
+        //     document.getElementById("result").innerText = newArr.join(" ");
+        // }
+
+        //for-of문
+        // function capitalize() {
+        //     const inputArr = document.getElementById("textarea").value.split(" "); // [aa, bb, cc]
+        //     let newArr = [];
+        //     for (let word of inputArr) {
+        //         newArr.push(word.charAt(0).toUpperCase() + word.slice(1));
+        //     }
+        //     document.getElementById("result").innerText = newArr.join(" ");
+        // }
+
+        // map사용
+        // function capitalize() {
+        //     const inputArr = document.getElementById("textarea").value.split(" ");
+        //     const newArr = inputArr.map((e) => e.charAt(0).toUpperCase() + e.slice(1)).join(" ");
+        //     document.getElementById("result").innerText = newArr;
+        // }
+        // map사용(한줄로)
+        function capitalize() {
+            document.getElementById("result").innerText = document.getElementById("textarea").value.split(" ").map((e) => e.charAt(0).toUpperCase() + e.slice(1)).join(" ");
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

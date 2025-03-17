@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+
+<body>
+
+    <h1>문자열에서 단어 찾기</h1>
+    <textarea id="textBox" cols="60" rows="5" placeholder="문장을 입력해 주세요"></textarea>
+    <br>
+
+    <input type="text" id="searchBox">
+    <input type="button" id="btn" value="단어 카운트" onclick="countWord()">
+    <p id="result"></p>
+
+    <script>
+        // .split(구분자) : 문자열을 구분자 기준으로 잘라 배열로 반환 (**배열의 개수는 구분자의 개수 보다 하나 큼)
+
+        // 문자열에서 단어 찾기(대소문자 구분X)
+        // split, toLowerCase/toUppercase       
+
+        // 연습2
+        function countWord() {
+            const textBoxVal = document.getElementById("textBox").value.toUpperCase();
+            const searchBoxVal = document.getElementById("searchBox").value.toUpperCase();
+
+            let result = textBoxVal.split(searchBoxVal).length - 1;
+            alert(result);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

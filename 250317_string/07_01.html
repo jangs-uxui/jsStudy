@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+
+<body>
+
+    <input type="text" id="input" placeholder="뒤집을 문장을 입력해 주세요.">
+    <button type="button" id="btn" onclick="reverse()">뒤집기</button>
+    <p id="result">결과:</p>
+
+    <script>
+        // 텍스트 순서 뒤집기
+        function reverse() {
+            const inputVal = document.getElementById("input").value;
+            let array = [];
+            let index = 0;
+            for (let i = inputVal.length - 1; i >= 0; i--) {
+                array[index] = inputVal[i];
+                index++
+            }
+            const result = document.getElementById("result");
+            result.innerText = "결과: " + array;
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

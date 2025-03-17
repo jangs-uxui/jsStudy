@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+
+<body>
+
+    <textarea id="textarea" cols="40" rows="6"></textarea>
+    <br>
+    <button onclick="converse()">변환</button>
+    <hr>
+    <p id="result"></p>
+
+
+    <script>
+        // 단어 첫 글자 대문자로 변환
+        // 배열로(split) > 첫글자대문자 > 문자열 붙임(join)
+
+        function converse() {
+            const textVal = document.getElementById("textarea").value;
+            const wordArr = textVal.split(" ");
+
+            const newArr = wordArr.map((e) => {
+                let firstChar = e.charAt(0).toUpperCase();
+                let restChar = e.slice(1); // substring() 도 가능 substr()
+                return firstChar + restChar;
+            })
+
+            const sumString = newArr.join(" ");
+        
+            document.getElementById("result").innerText = sumString;
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

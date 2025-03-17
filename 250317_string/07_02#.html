@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+
+<body>
+
+    <input type="text" id="input" placeholder="텍스트를 입력해 주세요">
+    <button type="submit" onclick="reverse()">뒤집기</button>
+    <p id="result"></p>
+
+
+    <script>
+        // 텍스트 순서 뒤집기(선생님 풀이)
+        function reverse() {
+            let inputVal = document.getElementById("input").value;
+            let result = "";
+            for (let i = inputVal.length - 1; i >= 0; i--) {
+                result = result + inputVal[i];
+            }
+            const resultStr = document.getElementById("result");
+            resultStr.innerText = result;
+        }
+
+        // 배열 reverse 사용
+        // .split("").reverse().join("") => 배열화 > 거꾸로 > 문자열붙임
+        // function reverse() {
+        //     let inputVal = document.getElementById("input").value;
+        //     inputVal.split("").reverse().join(""); // edcba
+            
+        //     const resultStr = document.getElementById("result");
+        //     resultStr.innerText = result;
+        // }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

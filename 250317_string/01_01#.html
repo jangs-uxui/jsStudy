@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+</head>
+<body>
+    
+    <script>
+
+        // const s1 = new String("Web ");
+        const s1 = "Web ";
+        const s2 = "Programming";
+
+        document.write(`s1 = ${s1} <br>`);
+        document.write(`s2 = ${s2} <hr>`);
+
+        document.write(`s1.charAt(0) : ${s1.charAt(0)} <hr>`); // i번째 인덱스 문자
+        document.write(`s1.concat(s2) : ${s1.concat(s2)} <hr>`); // 문자열 합침 (s1 + s2)
+        document.write(`s2.indexOf("i") : ${s2.indexOf("i")} <hr>`);
+        document.write(`s2.replace("m", "M") : ${s2.replace("m", "M") } <hr>`);
+        document.write(`s2.search("i") : ${s2.search("i")} <hr>`); // 첫번째 i문자의 index
+        document.write(`s2.split("a") : ${s2.split("a")} <hr>`); // a
+
+        document.write(`s2.substr(0, 4) : ${s2.substr(0, 4)} <hr>`); // index0 부터 4개
+        document.write(`s2.substring(3,7) : ${s2.substring(3, 7)} <hr>`); // index3 부터 index7 전까지
+        document.write(`s2.slice(2, -3) : ${s2.slice(3, -2)} <hr>`); // substring()과 동일하나 음수가능
+
+        document.write(`s2.toLowerCase() : ${s2.toLowerCase()} <hr>`);
+        document.write(`s2.toUpperCase() : ${s2.toUpperCase()} <hr>`);
+        document.write(`s1.trim() : +${s1.trim()}+ <hr>`);
+
+
+
+
+
+
+
+    </script>
+    
+
+</body>
+</html>
