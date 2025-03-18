@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // [객체]는 관련된 데이터+함수 의 덩어리
+        // 리터럴 방식 [객체] 생성
+
+        let person = {
+            name: "jang",
+            age: 23,
+            intro: function () {
+                document.write("My name: " + this.name + ", age: " + this.age + "<hr>");
+            }
+        };
+        person.intro();
+
+        person.age = 30;
+        person.intro();
+
+        person.name = "Kim";
+        person.intro();
+
+        person.job = "teacher";
+        person.intro = function () {
+            document.write("My name: " + this.name + ", age: " + this.age + ", job: " + this.job + "<hr>");
+        }
+        person.intro();
+
+
+
+    </script>
+
+</body>
+
+</html>

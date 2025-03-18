@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 커스텀 객체 만들어보기
+
+        const student = {
+            name: "Jang",
+            scores: [80, 70],
+            addScore(score) {
+                this.scores.push(score);
+                console.log("점수" + score + "추가");
+            },
+            deleteScoreByScore(score) {
+                this.scores = this.scores.filter((e) => e !== score);
+            },
+            deleteScoreByIndex(index) {
+                this.scores.splice(index, 1);
+            },
+            getAvgScore() {
+                let sum = 0;
+                for (score of this.scores) {
+                    sum += score;
+                }
+                let avgScore = Math.round(sum / this.scores.length);
+                return avgScore;
+                // document.write(`${this.name}의 평균점수는 ${avgScore}점 입니다.`);
+            },
+            getGrade() {
+                let avgScore = this.getAvgScore();
+                let switchScore = parseInt(avgScore / 10);
+                switch (switchScore) {
+                    case 10:
+                    case 9:
+                        return "A";
+                        break;
+                    case 8:
+                        return "B";
+                        break;
+                    case 7:
+                        return "C";
+                        break;
+                    case 6:
+                        return "D";
+                        break;
+                    default:
+                        return "불합격";
+                }
+
+            }
+
+        }
+
+        document.write(`${student.name}의 점수는 ${student.scores} 입니다.<hr>`);
+
+        student.addScore(60);
+        student.addScore(40);
+        document.write(`${student.name}의 점수는 ${student.scores} 입니다.<hr>`);
+
+        student.deleteScoreByScore(70);
+        document.write(`${student.name}의 점수는 ${student.scores} 입니다.<hr>`);
+
+        student.deleteScoreByIndex(2);
+        document.write(`${student.name}의 점수는 ${student.scores} 입니다.<hr>`);
+
+
+        document.write(`${student.name}의 평균점수는 ${student.getAvgScore()}점 입니다.<hr>`);
+        document.write(`${student.name}의 등급은 ${student.getGrade()} 입니다.<hr>`);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

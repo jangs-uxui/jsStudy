@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // let today = new Date();
+        // const day = "일월화수목금토";
+        // document.write(day[today.getDay()] + "요일 <br>");
+
+        // const today = new Date();
+        // const day = "일월화수목금토";
+
+        // document.write(today + "<hr>");
+        // document.write(today.toLocaleString() + "<hr>");
+        // document.write(today.getFullYear() + "년<hr>");
+        // document.write(today.getMonth() + "월<hr>");
+        // document.write(today.getDate() + "일<hr>");
+        // document.write(day[today.getDay()] + "요일<hr>"); //**주의
+        // document.write(today.getHours() + "시<hr>");
+        // document.write(today.getMinutes() + "분<hr>");
+        // document.write(today.getSeconds() + "초<hr>");
+        // document.write(today.getMilliseconds() + "밀리초<hr>");
+
+        const today = new Date();
+        const day = "일월화수목금토";
+        const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Dec", "Nov"]
+
+        document.write(today + "<hr>");
+        document.write(today.toLocaleString() + "<hr>");
+        document.write(today.toLocaleDateString() + "<hr>");
+        document.write(today.toLocaleTimeString() + "<hr>");
+
+        document.write(today.getFullYear() + "년<hr>");
+        document.write(today.getMonth() + 1 + "월<hr>");
+        document.write(month[today.getMonth()]+ "<hr>");
+
+        document.write(today.getDate() + "일<hr>");
+        document.write(day[today.getDay()] + "요일<hr>");
+        document.write(today.getHours() + "시<hr>");
+        document.write(today.getMinutes() + "분<hr>");
+        document.write(today.getSeconds() + "초<hr>");
+        document.write(today.getMilliseconds() + "밀리초<hr>");
+
+
+    </script>
+
+</body>
+
+</html>

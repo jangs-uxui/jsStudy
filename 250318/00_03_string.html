@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+    <style>
+        ul {
+            padding-left: 0;
+        }
+
+        .todo-item {
+            background-color: beige;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>할 일 추가하기</h1>
+    <input type="text" id="input">
+    <button onclick="addToDo()">추가</button>
+
+    <ul id="toDoList">
+        <li class="todo-item" id="todo01"></li>
+        <li class="todo-item" id="todo02"></li>
+        <li class="todo-item" id="todo03"></li>
+        <li class="todo-item" id="todo04"></li>
+        <li class="todo-item" id="todo05"></li>
+    </ul>
+
+
+    <script>
+        // 할 일 추가하기
+        // 더이상 할 일을 추가할 수 없습니다.(5개)
+
+        // (for문 사용)
+        // 배열생성, for문으로 배열 돌려주기
+
+        let toDoListArr = [];
+        function addToDo() {
+            const input = document.getElementById("input");
+            for (i = 0; i < 5; i++) {
+                const item = document.getElementById("todo"+(i+1))
+
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

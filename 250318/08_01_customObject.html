@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const bankAccount = {
+            owner: "Jang",
+            accountNumber: "1234-5678-643",
+            balance: 10000,
+
+            deposit(amount){
+                this.balance += amount;
+                console.log(amount + "입금");
+            },
+            withdraw(amount){
+                if (this.balance < amount) {
+                    document.write("잔액이 부족합니다.");
+                } else {
+                    this.balance -= amount;
+                }
+                console.log(amount + "출금");
+            },
+            displayBalance(){
+                document.write(`${this.owner}님의 ${this.accountNumber} 계좌 잔액은 ${this.balance}원 입니다.<hr>`)
+            }
+        }
+
+        bankAccount.displayBalance();
+
+        bankAccount.deposit(20000);
+        bankAccount.withdraw(10000);
+        bankAccount.displayBalance();
+
+
+
+    </script>
+
+</body>
+
+</html>

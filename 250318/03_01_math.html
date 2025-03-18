@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // setInterval(함수정의, 시간)
+
+
+
+
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        let count = 1;
+
+        function changeColor() {
+            if (++count > 25) {
+                clearInterval(interverID); // setInterval 해소
+            } else {
+                for (let k = 0; k < 6; k++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                document.write(`<div style="background-color:${color}">${color}</div>`);
+                color = "#"; // 16진수 문자열 초기화
+            }
+        }
+
+        let interverID = setInterval(changeColor, 500);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

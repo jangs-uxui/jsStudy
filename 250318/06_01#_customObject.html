@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const shoppingCart = { // const: 객체 안에 값이 바뀌는건 가능
+            items: [],
+            addItem(item) {
+                this.items.push(item);
+                console.log(`${item} added to cart`);
+            },
+            removeItem(item) {
+                this.items = this.items.filter((e) => e !== item); //["빨간치마", "모자"]
+                console.log(`${item} remove to cart`);
+            },
+            listItems() {
+                document.write(this.items + "<hr>");
+            }
+        };
+
+        shoppingCart.addItem("검정자켓");
+        shoppingCart.addItem("빨간치마");
+        shoppingCart.addItem("모자");
+        shoppingCart.listItems();
+
+        shoppingCart.removeItem("빨간치마");
+        shoppingCart.listItems();
+
+
+    </script>
+
+</body>
+
+</html>

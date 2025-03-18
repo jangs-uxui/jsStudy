@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+    <style>
+        ul {
+            padding-left: 0;
+        }
+
+        .todo-item {
+            background-color: beige;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>할 일 추가하기</h1>
+    <input type="text" id="input">
+    <button onclick="addToDo()">추가</button>
+
+    <ul id="toDoList">
+        <li class="todo-item" id="todo1"></li>
+        <li class="todo-item" id="todo2"></li>
+        <li class="todo-item" id="todo3"></li>
+        <li class="todo-item" id="todo4"></li>
+        <li class="todo-item" id="todo5"></li>
+    </ul>
+
+
+    <script>
+        // 할 일 추가하기
+        // 더이상 할 일을 추가할 수 없습니다.(5개)
+        let toDoArray = [];
+        let index = 0;
+
+        function addToDo() {
+            const inputVal = document.getElementById("input").value;
+            const toDoList = document.getElementById("toDoList");
+            if (index === 5) {
+                alert("더이상 할 일을 추가할 수 없습니다.(최대 5개)");
+                return;
+            }
+            toDoArray.push(inputVal);
+            document.getElementById("todo" + (index + 1)).innerText = inputVal;
+            index++;
+
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

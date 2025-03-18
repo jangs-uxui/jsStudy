@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 - String객체(문자열)</title>
+    <style>
+        ul {
+            padding-left: 0;
+        }
+
+        .todo-item {
+            background-color: beige;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>할 일 추가하기</h1>
+    <input type="text" id="input">
+    <button onclick="addToDo()">추가</button>
+
+    <ul id="toDoList">
+        <li class="todo-item" id="todo1"></li>
+        <li class="todo-item" id="todo2"></li>
+        <li class="todo-item" id="todo3"></li>
+        <li class="todo-item" id="todo4"></li>
+        <li class="todo-item" id="todo5"></li>
+    </ul>
+
+
+    <script>
+        // 할 일 추가하기
+        // 더이상 할 일을 추가할 수 없습니다.(5개)
+        // (선생님풀이)
+
+        let count = 1; // 전역변수(값 유지)
+        let toDoArr = []
+        function addToDo() {
+
+            if (count > 5) {
+                alert("5개 이상은 입력할 수 없습니다.");
+            } else {
+                const input = document.getElementById("input");
+                const item = document.getElementById("todo" + count);
+
+                item.innerText = input.value;
+                input.value = "";
+
+                toDoArr.push(input.value); console.log(toDoArr);
+
+                count++;
+            }
+        }
+
+        // (value,innerText 등..)
+        // 속성이 대입연산자 우측에 있을때는 *읽기 
+        // 속성이 대입연산자 좌쯕에 있을때는 *쓰기
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

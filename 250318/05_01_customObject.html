@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // [객체]는 관련된 데이터+함수 의 덩어리
+
+        // const car = {
+        //     brand: "Tesla",
+        //     model: "Model 3",
+        //     year: 2022,
+        //     // start: function () { }
+        //     start() {
+        //         document.write(`${this.brand}, ${this.model}, is starting ${this.year}`);
+        //     }
+        // };
+        // car.start();
+
+        // const book = {
+        //     title: "javaScript",
+        //     author: "김진아",
+        //     pages: 350,
+        //     publisher: "한빛미디어",
+        //     read(){
+        //         document.write(`Reading ${this.title} by ${this.author}. <br>pages: ${this.pages}`);
+        //     }
+        // }
+        // book.read();
+
+        const calculator = {
+            add(a, b) {
+                return a + b;
+            },
+            subtract(a, b) {
+                return a - b;
+            },
+            multiply(a, b) {
+                return a * b;
+            },
+            divide(a, b) {
+                return a / b
+            }
+        };
+        document.write(calculator.add(2,3) + "<br>");
+        document.write(calculator.subtract(5,3) + "<br>");
+        document.write(calculator.multiply(5,3) + "<br>");
+        document.write(calculator.divide(10,20) + "<br>");
+
+
+
+    </script>
+
+</body>
+
+</html>
