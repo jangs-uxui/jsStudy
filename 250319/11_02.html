@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style_js.css">
+    <title>DOM객체 다루기(속성 변경하기)</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <img src="photo/photo1.jpg" alt="여자사진" id="img"> <br>
+    <button type="button" onclick="changeImage()">Change</button>
+
+    <script>
+        let toggle = false;
+        function changeImage() {
+            if (toggle) { // +1 짝수이면
+                document.getElementById("img").src = "photo/photo1.jpg";
+                document.getElementById("img").alt = "여자사진";
+            } else { // 홀수이면
+                document.getElementById("img").src = "photo/photo2.jpg";
+                document.getElementById("img").alt = "남자사진";
+            }
+            toggle = !toggle;
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

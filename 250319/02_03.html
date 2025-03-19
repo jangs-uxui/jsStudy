@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 여러 개에 접근하기</title>
+</head>
+
+<body>
+    <!-- 
+    document.getElementsByClassName("class") 배열로 반환!!
+-->
+
+
+    <p>p & No class</p>
+    <p class="elm">엘리먼트1</p>
+    <p class="elm">엘리먼트2</p>
+    <p class="elm">엘리먼트3</p>
+    <hr>
+
+    <script>
+        // 연습2
+       
+        // const tags = document.getElementsByTagName("p");
+        // for (item of tags) {
+        //     document.write(item.textContent + "<br>");
+        // }
+
+        const elements = document.getElementsByClassName("elm");
+        for (let i = 0; i < elements.length; i++) {
+            document.writeln(elements[i].innerText+"<br>");
+        }
+
+        const tags = document.getElementsByTagName("p");
+        for (let item of tags) {
+            document.writeln(item.textContent+"<br>");
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

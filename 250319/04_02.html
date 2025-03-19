@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼 태그 문자열 읽기</title>
+</head>
+<!-- 폼태그 안에 좀더 손쉽게 접근 가능 (form태그 name 필요) -->
+<body>
+
+    <form name="myForm">
+        <input type="text" name="userId" value="jang">
+    </form>
+   
+    <script>
+    //    const id1 = document.myForm.userId;
+    //    alert(`${id1.value}님 환영합니다`)
+
+       document.writeln(document.myForm.userId.value);
+    </script>
+
+
+
+</body>
+
+</html>

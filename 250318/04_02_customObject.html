@@ -37,6 +37,28 @@
         person.intro();
 
 
+        let person2 = {
+            name: "jang",
+            age: 23,
+            info: function () {
+                document.write(`my name: ${this.name}, age: ${this.age}<hr>`);
+            }
+        }
+
+        person2.info();
+        person2.name = "Janghy";
+        document.write(person2.name + "<hr>");
+        person2.sex = "male";
+        document.write(person2.sex + "<hr>");
+
+        person2.info = function () {
+            document.write(`my name: ${this.name}, age: ${this.age}, sex: ${this.sex}<hr>`);
+        }
+
+        person2.info();
+
+
+
 
     </script>
 

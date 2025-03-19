@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼 태그 문자열 읽기</title>
+</head>
+<!-- 폼태그 안에 좀더 손쉽게 접근 가능 (form태그 name 필요) -->
+
+<body>
+
+    <form name="myForm">
+        사용자ID: <input type="text" name="userId"> <br>
+        패스워드: <input type="password" name="password">
+        <input type="submit" value="log in" onclick="getInput()">
+    </form>
+
+    <script>
+
+        function getInput() {
+            const id = document.myForm.userId;
+            const pw = document.myForm.password;
+            if (pw.value.length <= 4) {
+                alert(`${id.value}님 패스워드를 변경하세요.`);
+            } else {
+                alert(`${id.value}님 환영합니다.`);
+            }
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

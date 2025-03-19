@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 커스텀 객체 만들어보기
+
+        const student = {
+            id: "2025 301 0001", // 학번
+            name: "JHY",
+            scores: [],
+            addScore(score) {
+                this.scores.push(score);
+                console.log(`${score.subject} ${score.score}점 입력`);
+            },
+            getTotal() {
+                let sum = 0;
+                // for (let s of this.scores) {
+                //     sum += s.score;
+                // }
+                for (let i = 0; i < this.scores.length;i++) {
+                    sum += this.scores[i].score
+                }
+                return sum;
+            },
+            getAvg() {
+                let sum = this.getTotal(); // 총합 호출
+                let avg = sum / this.scores.length;
+                return avg;
+            }
+        }
+
+        student.addScore({ subject: "javaScript", score: 85 }); // **배열안에 객체 입력
+        student.addScore({ subject: "html", score: 75 });
+        student.addScore({ subject: "css", score: 60 });
+        student.addScore({ subject: "java", score: 90 });
+
+        document.write(student.scores + "<hr>");
+
+        document.write(student.getTotal() + "<hr>");
+        document.write(student.getAvg() + "<hr>");
+
+
+    </script>
+
+</body>
+
+</html>

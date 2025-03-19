@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+    <script>
+
+        const shopping = {
+            items: [],
+            addItem(item) {
+                this.items.push(item);
+                console.log(item + "추가");
+            },
+            removeItem(item) {
+                this.items = this.items.filter((e) => e !== item);
+            },
+            itemList: function () {
+                document.write(this.items + "<hr>");
+            }
+        }
+        shopping.addItem("carrot");
+        shopping.addItem("strawberry");
+        shopping.addItem("apple");
+        shopping.removeItem("apple");
+        shopping.itemList();
+
+
+    </script>
+
+</body>
+
+</html>

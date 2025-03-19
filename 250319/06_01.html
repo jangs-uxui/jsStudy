@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea 문자열 읽기</title>
+</head>
+
+<body>
+
+    <textarea id="input" rows="5" cols="20"></textarea><br>
+    <input type="button" value="Get Text" onclick="getTextarea()">
+    <hr>
+    <p id="result"></p>
+
+    <script>
+
+        function getTextarea() {
+            const st = document.getElementById("input").value;
+            document.getElementById("result").innerText = st; // display:none 된것은 안가져옴
+            document.getElementById("result").textContent = st; // textContent 안보이는것도 가져옴
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

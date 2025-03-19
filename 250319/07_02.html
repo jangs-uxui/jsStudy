@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스에서 값 여러개 읽기</title>
+</head>
+
+<body>
+
+    <input type="checkbox" name="myAdd" value="1500">추가채소 1500원 <br>
+    <input type="checkbox" name="myAdd" value="1000">추가음료 1000원 <br>
+    <input type="checkbox" name="myAdd" value="500">추가피클 500원 <br>
+    <input type="button" value="add" onclick="getCheckbox()">
+    <hr>
+    <p id="result"></p>
+
+    <script>
+        function getCheckbox() {
+            let sum = 0;
+            const adds = document.getElementsByName("myAdd");
+
+            for ( item of adds){
+                if (item.checked) {
+                    sum += parseInt(item.value);
+                }
+            }
+            document.getElementById("result").innerText = `추가금액 ${sum}원`;
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스에서 값 여러개 읽기</title>
+</head>
+
+<body>
+    <!-- label추가, 클릭시 바로 계산, reset버튼(checked 속성 false) -->
+    <!-- (연습2) -->
+
+    <label><input type="checkbox" name="myAdd" value="1500" onclick="getCheckbox()">추가채소 1500원</label> <br>
+    <label><input type="checkbox" name="myAdd" value="1000" onclick="getCheckbox()">추가음료 1000원</label> <br>
+    <label><input type="checkbox" name="myAdd" value="500" onclick="getCheckbox()">추가피클 500원</label> <br>
+    <input type="button" value="reset" onclick="reset()">
+    <hr>
+    <p id="result">추가비용 총합: 0</p>
+
+    <script>
+
+        function getCheckbox() {
+            let sum = 0;
+            const adds = document.getElementsByName("myAdd");
+
+            for (item of adds) {
+                if (item.checked) {
+                    sum += parseInt(item.value); // 정수로 바꿈
+                    // sum += Math.floor(item.value); // 소수점 버림
+                }
+            }
+            console.log(sum);
+            document.getElementById("result").textContent = `추가비용 총합: ${sum}`;
+        }
+
+        function reset() {
+            const adds = document.getElementsByName("myAdd");
+            for (item of adds) {
+                item.checked = false;
+            }
+            document.getElementById("result").textContent = "추가비용 총합: 0";
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

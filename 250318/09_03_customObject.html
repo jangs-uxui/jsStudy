@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객체</title>
+</head>
+
+<body>
+
+
+    <script>
+        const student = {
+            id: 250319001,
+            name: "jang",
+            scores: [],
+            addScore(e) {
+                this.scores.push(e);
+                console.log(e.subject + e.score + "입력");
+            },
+            removeScore(e) {
+                this.scores = this.scores.filter((e) => e !== e);
+                console.log(e.subject + e.score + "삭제");
+            },
+            getTotal() {
+                let sum = 0;
+                for (let s of this.scores) {
+                    sum += s;
+                }
+                return sum;
+            },
+            getAvg(){
+                const sum = this.getTotal();
+                return sum / this.scores.length;
+            }
+        }
+
+        student.addScore({subject:"javascript", score:85});
+        student.addScore({subject:"html", score:55});
+        student.addScore({subject:"css", score:65});
+        student.addScore({subject:"java", score:90});
+
+        // student.removeScore({subject:"javascript", score:85});
+
+        document.write(student.scores[0].subject + student.scores[0].score +"<hr>");
+
+
+
+
+    </script>
+
+</body>
+
+</html>
