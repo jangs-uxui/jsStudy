@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 버튼에서 값 읽기</title>
+</head>
+
+<body>
+
+    <label><input type="radio" name="color" value="red">Red</label> <br>
+    <label><input type="radio" name="color" value="green">GREEN</label> <br>
+    <label><input type="radio" name="color" value="blue">BLUE</label> <br>
+    <button type="button" onclick="getRadio()">choice</button>
+    <hr>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function getRadio() {
+            const choice = document.querySelectorAll("input[type='radio']");
+            for (let item of choice) {
+                if (item.checked) {
+                    document.getElementById("result").textContent = item.value;
+                    break; // for문 탈출
+                }
+            }
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

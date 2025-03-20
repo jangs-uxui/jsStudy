@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style_js.css">
+    <title>DOM객체 다루기(문자열 회전)</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <h1 id="rotate">Programming</h1>
+
+    <script>
+        // 연습2
+        function rotateStr() {
+            const rotate = document.getElementById("rotate");
+            const rotateText = rotate.textContent;
+            const rotatedText = rotateText.slice(1) + rotateText[0];  // slice(start, end)
+            rotate.innerText = rotatedText;
+        }
+        setInterval(rotateStr, 500);
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

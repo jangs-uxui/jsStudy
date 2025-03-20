@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너 사용하기</title>
+    <style>
+        body{text-align:center;}
+        #rotateImage{transition:transform 1s;}
+    </style>
+</head>
+
+<body>
+
+    <h4>이미지를 클릭해 보세요.</h4>
+    <img id="rotateImage" src="../media3/australia.jpg">
+
+    <script>
+        // 이벤트리스너를 script에서 선언가능
+        // 함수 속성값 정의 (함수호출X)
+        // image.onclick = rotate;
+
+        let deg = 0;
+        let image = document.getElementById("rotateImage");
+        image.onclick = rotate; // 함수정의(또는 함수)
+        image.ondblclick = rerotate;
+
+        function rotate() {
+            deg += 360;
+            image.style.transform = `rotate(${deg}deg)`;
+        }
+        function rerotate() {
+            deg -= 360;
+            image.style.transform = `rotate(${deg}deg)`;
+        }
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

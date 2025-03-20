@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이더</title>
+</head>
+
+<body>
+
+    <div id="imgbox">
+        <img src="../media3/africa.jpg" id="img" height="300px">
+    </div>
+    <button onclick="changeImg(3)">이전</button>
+    <button onclick="changeImg(1)">다음</button>
+
+    <script>
+        // 연습3 : 함수 하나로
+        let index = 0;
+        const arr = ["", 1, 2, 3]
+        const img = document.getElementById("img");
+        function changeImg(n) {
+            index = (index + n) % 4;
+            img.src = `../media3/africa${arr[index]}.jpg`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

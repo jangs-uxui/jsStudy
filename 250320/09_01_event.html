@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너 사용하기</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- form태그 안에 -->
+    <!-- addEventListener 사용 -->
+    <!-- submit 이벤트는 form에서 발생함 -->
+    <!-- form action 설정 안되있으면 - 새로고침방지 -->
+    <!-- document.body.appendChild() -->
+
+    <form name="myForm">
+        <label>이름 : <input type="text" name="inputName"></label>
+        <label><input type="checkbox" name="checkbox"> 약관에 동의합니다.</label>
+        <button type="submit">제출</button>
+    </form>
+
+    <script>
+        const myForm = document.myForm;
+        const inputName = document.myForm.inputName;
+        const checkbox = document.myForm.checkbox;
+
+        myForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // 새로고침 방지
+
+            let node = document.createElement("p"); // node 생성
+            node.textContent = inputName.value;
+            if (checkbox.checked) {
+                node.textContent += "님 약관에 동의하셨습니다.";
+            } else {
+                node.textContent += "님 약관에 동의하지 않으셨습니다.";
+            }
+            document.body.appendChild(node);
+        });
+
+    </script>
+</body>
+
+</html>

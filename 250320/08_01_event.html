@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너 사용하기</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <!-- 이벤트핸들러 호출시 - "이벤트객체" 전달 : 매개변수로 전달받음 -->
+
+    <img src="../media/squirrel1.png" id="follow" width="50">
+
+    <script>
+        let img = document.getElementById("follow");
+        document.onmousemove = updateImg; // 이벤트핸들러 호출
+
+        function updateImg(event){ // 이벤트객체 - 매개변수로 전달받음
+            const X = event.clientX;
+            const Y = event.clientY;
+            img.style.transform = `translate(${X}px, ${Y}px)`;
+        }
+
+
+
+    </script>
+</body>
+
+</html>

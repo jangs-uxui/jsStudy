@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스에서 값 읽기</title>
+</head>
+
+<body>
+
+    <input type="checkbox" id="myCheckBox">다음단계 진행 확인! <br>
+    <input type="button" value="process" onclick="getCheckbox()">
+    <hr>
+    <p id="result"></p>
+
+    <script>
+        // function getCheckbox() {
+        //     if (document.getElementById("myCheckBox").checked === true) {
+        //         document.getElementById("result").textContent = "작업을 진행하겠습니다.";
+        //     } else {
+        //         document.getElementById("result").textContent = "사용자의 요구로 중단!";
+        //     }
+        // }
+
+        // 연습2
+        function getCheckbox(){
+            if (document.getElementById("myCheckBox").checked === true) {
+                document.getElementById("result").textContent = "작업진행";
+            } else {
+                document.getElementById("result").textContent = "작업중단";
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

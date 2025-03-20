@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너 사용하기</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #img {
+            transition: transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h4>이미지에 마우스 커서를 올렸다 치워보세요.</h4>
+    <img id="img" src="../media3/australia.jpg" onmouseover="gone(e)"><!-- ()안에 매개변수 넣어야 이벤트객체 전달받을수 있음 -->
+
+    <script>
+        // addEventListener("이벤트이름", 함수정의)
+
+        let image = document.getElementById("img");
+        image.addEventListener("mouseover", function () { // 이벤트명, 함수정의
+            this.style.transform = "scale(0,0)";
+        });
+        
+        image.addEventLIstener("mouseout", (event) => {
+            event.target.style.transform = "scale(1,1)"; // 화살표 함수 안에서는 this 사용불가!!
+        }); // event.target 이벤트를 발생시킨 객체**
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

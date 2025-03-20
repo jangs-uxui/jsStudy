@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트리스너 사용하기</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- form태그 안에 -->
+    <!-- addEventListener 사용 -->
+    <!-- submit 이벤트는 form에서 발생함 -->
+    <!-- form action 설정 안되있으면 - 새로고침방지 -->
+    <!-- document.body.appendChild() -->
+
+    <form id="myForm" name="myFormName">
+        <label>이름 : <input type="text" name="userName"></label>
+        <label><input type="checkbox" id="isAgree" name="isAgree">약관에 동의합니다.</label>
+        <button type="submit">제출</button>
+    </form>
+    <p id="p01"></p>
+    <p id="p02"></p>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", (event) => {
+            event.preventDefault(); // 기본기능(새로고침) 방지
+            // let name = document.myFormName.userName.value;
+            let name = event.target.userName.value; // target은 form태그 (event발생지점)
+            let agree = event.target.isAgree.checked; // true / false
+
+            document.getElementById("p01").innerText = "이름: " + name;
+            
+            document.getElementById("p02").innerText = "약관동의: " + (agree ? "동의함" : "동의하지 않음");
+
+        });
+
+    </script>
+</body>
+
+</html>
