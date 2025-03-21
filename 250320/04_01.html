@@ -16,6 +16,10 @@
     <button onclick="nextImg()">다음</button>
 
     <script>
+        // index 0 ~ n 반복식
+        // 증가 : (index + 1) % n
+        // 감소 : (index -1 + n) % n
+
         // (index + 1) % 4
         // (index -1 + 4) % 4
 
@@ -32,7 +36,7 @@
             img.src = `../media3/africa${srcArr[index]}.jpg`;
         }
 
-        
+
 
 
 

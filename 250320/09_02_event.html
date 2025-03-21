@@ -30,7 +30,8 @@
         const userName = document.myForm.userName;
         const isAgree = document.myForm.isAgree;
 
-        myForm.addEventListener("submit", function(e){
+        // document.forms["myForm"].addEventListener("submit", function(e){ // 동일
+        document.myForm.addEventListener("submit", function (e) {
             e.preventDefault(); // 새로고침 방지
 
             document.getElementById("p01").innerText = userName.value + "님,";

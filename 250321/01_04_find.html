@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        없는아이디 / 비번틀림
+        로그인성공 - 환영합니다 id
+        5명의 계정정보 - 배열속 객체
+        (연습2 : 선생님풀이)
+    -->
+
+    <h1>로그인</h1>
+
+    <form name="logForm">
+        <label>아이디: <input type="text" name="userId"></label> <br>
+        <label>비밀번호: <input type="password" name="userPw"></label> <br>
+        <button type="submit">로그인</button>
+    </form>
+
+    <script>
+        let accountArr = [
+            { id: "jang1", pw: "qwe123" },
+            { id: "jang2", pw: "qwe123" },
+            { id: "jang3", pw: "qwe123" },
+            { id: "jang4", pw: "qwe123" },
+        ]
+
+        document.logForm.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const inputId = event.target.userId.value;
+            const inputPw = event.target.userPw.value;
+            let flag = false;
+
+            // let user = null; // 객체를 넣을 빈변수 (null)
+            // **forEach : map,filter와 for문 비슷 - return안함, 그냥 실행 - break없음 (break:for,while,swich-case)
+            // 하나씩 가져와 함수전달, return없음. 새배열 생성 안함
+            // accountArr.forEach((account) => { 
+            //     if (account.id === inputId) {
+            //         user = account;
+            //     }
+            // }); 
+
+            let user = user.find((u)=>u.id === inputId); 
+            // **find : 첫번째 조건에 맞는것 return;
+
+
+            // 같은id 있으면 user에 들어있고, 없으면 null
+            if (user === null) {
+                alert("없는 아이디 입니다.");
+                return; // 이벤트핸들러 종료
+            }
+            // 같은id 있으면
+            if (user.pw === inputPw) {
+                alert("로그인성공 : " + user.id);
+            } else {
+                alert("비밀번호가 일치하지 않습니다.");
+            }
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

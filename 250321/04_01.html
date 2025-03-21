@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 이벤트</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+       // input이벤트 : 변할때마다 발생
+       // 이름, 포지션 정보 객체 array 9개
+       // includes("문자열") 메써드 : 포함되어있으면 true, 포함안되어있으면 false
+
+       let names = "오지환 이병규 김현수 홍창기 문성주 오스틴";
+       const nameArr = names.split(" "); // 배열화
+       const filterArr = nameArr.filter((player) => player.includes("오")); // ["오지환", "오스틴"]
+       console.log(filterArr);
+
+
+       
+
+
+    </script>
+
+</body>
+
+</html>

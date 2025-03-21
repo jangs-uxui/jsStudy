@@ -13,6 +13,10 @@
     <button type="button" onclick="addNode('https://daum.net','_blank','새창')">추가</button>
 
     <script>
+        // createElement("div") 태그 생성
+        // 부모.appendChild(node) 부모노드에 node추가
+        // 부모.removeChild(node) 부모노드에 node삭제
+
 
         // function addNode(url,target,title) {
         //     let node = document.createElement("a");
@@ -22,7 +26,9 @@
         //     node.innerHTML = "<hr>" + url;
         //     document.getElementById("target").appendChild(node); // h3의 자식노드로 들어감
         // }
+        
 
+        // ver2
         function addNode(url) {
             let node1 = document.createElement("hr");
             let node2 = document.createElement("a");

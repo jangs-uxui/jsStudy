@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        없는아이디 / 비번틀림
+        로그인성공 - 환영합니다 id
+        5명의 계정정보 - 배열속 객체
+    -->
+
+    <h1>로그인</h1>
+
+    <form name="logForm" id="login">
+        <label>아이디: <input type="text" name="userId"></label> <br>
+        <label>비밀번호: <input type="password" name="userPw"></label> <br>
+        <button type="submit">로그인</button>
+    </form>
+
+    <script>
+        let accountArr = [
+            { id: "id1001", pw: "qwe123" },
+            { id: "id1002", pw: "qwe234" },
+            { id: "id1003", pw: "qwe345" },
+            { id: "id1004", pw: "qwe567" }
+        ]
+
+        document.logForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // const userId = logForm.userId.value; (??)
+            // const userId = document.logForm.userId.value;
+            const userId = e.target.userId.value;
+            const userPw = e.target.userPw.value;
+
+            let boolean = false;
+            for (let account of accountArr) {
+
+                if (userId === account.id) {
+
+                    if (userPw === account.pw) {
+                        alert(account.id + "님 로그인 되었습니다.");
+                        boolean = true;
+                        break;
+                    } else {
+                        alert("비밀번호가 틀렸습니다.");
+                        boolean = true;
+                        break;
+                    }
+
+                }
+            }
+
+            if (!boolean) {
+                alert("존재하지 않는 ID 입니다. 다시 입력하세요."); // for문 다 돌았는데 id 찾지 못함
+            }
+
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>

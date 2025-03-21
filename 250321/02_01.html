@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자목록 - 추가</title>
+</head>
+
+<body>
+    <!-- 
+        이름, 나이 객제배열
+        creatElement
+        버튼 클릭시 하나씩 추가
+    -->
+
+    <h1>사용자목록</h1>
+    <button id="addBtn">사용자 추가</button>
+    <ul id="ul"></ul>
+
+    <script>
+        let userArr = [
+            { name: "오지환", age: 23 },
+            { name: "김현수", age: 27 },
+            { name: "문보경", age: 35 },
+        ]
+        let count = 0;
+        document.getElementById("addBtn").addEventListener("click", (e) => {
+            let list = document.createElement("li");
+            list.innerText = userArr[count].name + "(" + userArr[count].age + "세)";
+            document.getElementById("ul").appendChild(list);
+            count++
+            if (count >= userArr.length) {
+                e.target.disabled = true;
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

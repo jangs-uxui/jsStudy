@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자목록 - 추가</title>
+</head>
+
+<body>
+    <!-- 
+        이름, 나이 객제배열
+        creatElement
+        버튼 클릭시 하나씩 추가
+        (연습2)
+    -->
+
+    <h1>사용자목록</h1>
+    <button id="addBtn" onclick="addUser()">사용자 추가</button>
+    <!-- <ul id="ul"></ul> -->
+
+    <script>
+        let userArr = [
+            { name: "오지환", age: 23 },
+            { name: "김현수", age: 27 },
+            { name: "문보경", age: 35 },
+        ]
+        let count = 0;
+        function addUser(){
+            // userArr[count].name
+            const ul = document.createElement("ul");
+            document.body.appendChild(ul);
+
+            const li = document.createElement("li");
+            li.innerText = userArr[count].name + userArr[count].age;
+            ul.appendChild(li); // 다 만들고 마지막에 append 시킴
+            count++
+            if (count >= userArr.length) {
+                document.getElementById("addBtn").disabled = true;
+                // document.e.target.disabled = true;
+            }
+        }
+
+        
+    </script>
+
+
+</body>
+
+</html>

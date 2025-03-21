@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>제품 목록</h2>
+    <div class="container" id="container"></div>
+
+    <script>
+        // map or **forEach : 한개씩 가져와서..
+        // box 안에 img / h / p태그
+        const path = "../image";
+        const prodectArr = [
+            { name: "노트북", price: 1500000, image: "../image/01.webp" },
+            { name: "스마트폰", price: 800000, image: "../image/02.webp" },
+            { name: "태블릿", price: 600000, image: "../image/03.webp" },
+            { name: "베어", price: 600000, image: "../media/bear1.png" },
+            { name: "아르마딜로", price: 600000, image: "../media/armadillo.png" },
+        ];
+
+        const conatiner = document.getElementById("container");
+
+        // forEach문** 사용
+        prodectArr.forEach((item) => {
+            const box = document.createElement("div");
+            box.className = "item";
+            box.innerHTML = `
+                <img src="${item.image}" width="100">
+                <h3>${item.name}</h3>
+                <p>${item.price.toLocaleString()}원</p>
+            `;
+            container.appendChild(box);
+        }); // toLocaleString() 
+
+        // for문 사용
+        // for(let item of prodectArr) {
+        //     const box = document.createElement("div");
+        //     box.className = "item";
+        //     box.innerHTML = `
+        //         <img src="${item.image}" width="100">
+        //         <h3>${item.name}</h3>
+        //         <p>${item.price.toLocaleString()}원</p>
+        //     `;
+        //     container.appendChild(box);
+        // }
+
+
+    </script>
+
+</body>
+
+</html>

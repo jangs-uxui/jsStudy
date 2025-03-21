@@ -29,7 +29,7 @@
         document.getElementById("myForm").addEventListener("submit", (event) => {
             event.preventDefault(); // 기본기능(새로고침) 방지
             // let name = document.myFormName.userName.value;
-            let name = event.target.userName.value; // target은 form태그 (event발생지점)
+            let name = event.target.userName.value; // event.target은 form태그 (event발생지점)
             let agree = event.target.isAgree.checked; // true / false
 
             document.getElementById("p01").innerText = "이름: " + name;
