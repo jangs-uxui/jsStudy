@@ -19,15 +19,28 @@
             deleteScore: function (score) {
                 this.scoreArr = this.scoreArr.filter((e) => e !== score);
                 console.log(`${score}점 삭제: [${this.scoreArr}]`);
+            },
+            getTotal: function () {
+                let sum = 0;
+                for (let score of this.scoreArr) {
+                    sum += score;
+                }
+                console.log(`점수합계: ${sum} [${this.scoreArr}]`); // 템플릿 문자열
+                return sum;
+            },
+            getAvg: function () {
+                const avg = this.getTotal() / this.scoreArr.length;
+                console.log(`점수평균: ${avg}`);
+                return avg;
             }
-            // 추가
         }
-
 
         student.addScore(100);
         student.addScore(80);
         student.addScore(60);
         student.deleteScore(80);
+        student.getTotal();
+        student.getAvg();
 
 
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객제 만들기</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "Jang",
+            scoreArr: [],
+            addScore: function (score) {
+                this.scoreArr.push(score);
+
+                // const gradeArr = [];
+                // for (let item of this.scoreArr) {
+                //     gradeArr.push(item.grade);
+                // }
+                const gradeArr = this.scoreArr.map((item) => item.grade);
+                console.log(`${score.grade}점 추가: [${gradeArr}]`);
+            },
+            delScore: function () {
+                this.scoreArr.pop();
+                console.log(`마지막 과목점수 삭제`);
+            },
+
+            delScoreByIndex: function (subjectName) {
+                const subjectNameIndex = this.scoreArr.findIndex((item) => item.subject === subjectName); // findIndex(함수정의) 배열 순회하며 첫번째 조건 만족하는 '객체'의 인덱스 반환
+
+                this.scoreArr.splice(subjectNameIndex, 1);
+                console.log(`${subjectName} (index:${subjectNameIndex}) 점수 삭제`);
+            },
+
+            getTotal: function () {
+                let sum = 0;
+                for (let i = 0; i < this.scoreArr.length; i++) {
+                    sum += this.scoreArr[i].grade;
+                }
+                console.log(`점수합계: ${sum}`); // 템플릿 문자열
+                return sum;
+            },
+            getAvg: function () {
+                const avg = this.getTotal() / this.scoreArr.length;
+                console.log(`점수평균: ${avg}`);
+                return avg;
+            }
+        }
+
+        student.addScore({ subject: "html", grade: 80 });
+        student.addScore({ subject: "css", grade: 70 });
+        student.addScore({ subject: "javascript", grade: 60 });
+        student.addScore({ subject: "java", grade: 90 });
+
+        student.delScore();
+
+        console.log(student.scoreArr);
+        student.delScoreByIndex("html");
+        console.log(student.scoreArr);
+
+        student.getTotal();
+        student.getAvg();
+
+
+
+    </script>
+</body>
+
+</html>
