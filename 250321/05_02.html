@@ -17,6 +17,8 @@
         // input이벤트 : 변할때마다 발생
         // 이름, 포지션 정보 객체 array 9개
         // includes 메써드
+        // filter(함수정의) : 함수에 true인 새로운 배열 생성
+        // (연습2)
 
         // 0. 이벤트 핸들러 등록 - (다음내용 이벤트핸들러 안에)
         // 1. 입력된 문자열 가져오기
@@ -41,22 +43,11 @@
             { name: "박동원", position: "포수" }
         ];
 
-        document.getElementById("inputText").addEventListener("input", (event) => {
-            const inputText = document.getElementById("inputText").value;
+        
 
-            const newArr = playerArr.filter((event) => event.name.includes(inputText)); //포함된 객체만 걸러낸 새배열 생성
-            const ul = document.getElementById("ul");
-            ul.innerHTML = "";
 
-            console.log(newArr);
+        
 
-            for (let item of newArr) {
-                const li = document.createElement("li");
-                li.innerText = item.name + " (" + item.position + ")";
-                ul.appendChild(li);
-            }
-
-        });
 
 
 

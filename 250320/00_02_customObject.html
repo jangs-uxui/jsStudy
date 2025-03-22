@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자객제 만들기</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            id: "891105",
+            name: "jang",
+            scores: [],
+            addScore(score) {
+                this.scores.push(score);
+                console.log(score + "점 입력");
+            },
+            deleteScoreByScore(score) {
+                this.scores = this.scores.filter((e) => e !== score); // true 인 것만 통과하는 배열 생성
+                console.log(score + "점 삭제");
+            },
+            deleteScoreByIndex(index) {
+                this.scores.splice(index, 1); // 배열수정 splice(index,num,new1,new2)
+            },
+            addScoreByIndex(index, add) {
+                this.scores.splice(index, 0, add);
+                console.log(`index:${index} ${add}점 추가`);
+            },
+            replaceScore(index, newScore) {
+                console.log(`index:${index} ${this.scores[index]}점 → ${newScore}점 수정`);
+                this.scores.splice(index, 1, newScore);
+            },
+            replaceScoreByScore(score, newScore) {
+                const index = this.scores.indexOf(score);
+                this.scores.splice(index, 1, newScore);
+                console.log(`index:${index} ${score}점 → ${newScore}점 수정`);
+            },
+            getTotal() {
+                let sum = 0;
+                for (let score of this.scores) { // this 필수!!
+                    sum += score;
+                }
+                return sum;
+            },
+            getAvg() {
+                let sum = this.getTotal();
+                let avg = sum / this.scores.length;
+                return avg;
+            }
+        }
+
+        person.addScore(80);
+        person.addScore(60);
+        person.addScore(70);
+        person.addScore(50);
+        person.deleteScoreByScore(80);
+        person.deleteScoreByIndex(0);
+        person.addScoreByIndex(1, 80);
+        person.replaceScore(2,100);
+        person.replaceScoreByScore(80, 40);
+        console.log(person.scores);
+
+        console.log("총합: " + person.getTotal());
+        console.log("평균: " + person.getAvg());
+
+    </script>
+</body>
+
+</html>
